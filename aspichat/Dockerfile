@@ -1,11 +1,12 @@
-
+# Utiliza una imagen base de PHP
 FROM php:8.2.4-fpm
 
 # Instala las dependencias necesarias
 RUN apt-get update && apt-get install -y \
     libzip-dev \
     zip \
-    unzip
+    unzip \
+    mysql-client
 
 # Instala las extensiones de PHP requeridas para Laravel
 RUN docker-php-ext-install pdo_mysql zip
@@ -25,18 +26,27 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Instala las dependencias del proyecto
 RUN composer install --no-interaction
 
+# Configura la base de datos
+ENV DB_CONNECTION=mysql
+ENV DB_HOST=db
+ENV DB_PORT=3306
+ENV DB_DATABASE=careersudg
+ENV DB_USERNAME=user
+ENV DB_PASSWORD=password
+
 # Establece los permisos adecuados en el directorio de almacenamiento de Laravel
 RUN chown -R www-data:www-data /var/www/html/storage
 
 # Ejecuta los comandos adicionales
-RUN composer install
 RUN php artisan key:generate
 
-#Para que los estilos funcionen
+# Para que los estilos funcionen
 RUN rm -r node_modules/
 RUN npm ci
 RUN npm install
 
+# Expone el puerto 80
 EXPOSE 80
 
-CMD ["php", "-S", "0.0.0.0:80", "-t", "public"]
+# Comando para iniciar el servidor PHP-FPM
+CMD ["php-fpm"]
