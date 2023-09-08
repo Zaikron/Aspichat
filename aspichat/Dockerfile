@@ -40,7 +40,6 @@ RUN chown -R www-data:www-data /var/www/html/storage
 RUN php artisan key:generate
 
 # Para que los estilos funcionen
-RUN rm -r node_modules/
 RUN npm ci
 RUN npm install
 
