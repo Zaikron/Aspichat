@@ -1,12 +1,11 @@
 # Utiliza una imagen base de PHP
-FROM php:8.2.4-fpm
+FROM php:8.2.4-fpm-buster
 
 # Instala las dependencias necesarias
 RUN apt-get update && apt-get install -y \
     libzip-dev \
     zip \
-    unzip \
-    mysql-client
+    unzip
 
 # Instala las extensiones de PHP requeridas para Laravel
 RUN docker-php-ext-install pdo_mysql zip
