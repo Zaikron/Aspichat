@@ -18,7 +18,7 @@ class ChatController extends Controller
 
     public function store(Request $request)
     {
-        $cadenas = ['Me gusta usar mi computadora para jugar videojuegos', 'Me gusta realizar programas que me ayuden a resolver problemas', 'Me gusta programar aplicaciones utiles que usen inteligencia artificial'];
+        /*$cadenas = ['Me gusta usar mi computadora para jugar videojuegos', 'Me gusta realizar programas que me ayuden a resolver problemas', 'Me gusta programar aplicaciones utiles que usen inteligencia artificial'];
 
         //IP del host que hace los calculos
         $response = Http::post('http://192.168.0.108:3000/realizar-prediccion', [
@@ -27,7 +27,7 @@ class ChatController extends Controller
         
         $resultado = $response->json();
 
-        dd($resultado);
+        dd($resultado);*/
     }
 
     public function show(string $id)

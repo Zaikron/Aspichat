@@ -39,7 +39,7 @@
 
             <div class="text-gray-700 text-start bg-white shadow-md rounded-lg border-2 px-8 py-4 m-2"> 
                 <div class="w-auto h-auto p-4">
-                    <p class="text-lg font-bold text-gray-800 mt-4 inline">Carrera: </p> <p class="text-base text-gray-500 inline">@if($results != null) {{$career->name}} @endif</p><br>
+                    <p class="text-lg font-bold text-gray-800 mt-4 inline">Carrera: </p> <p class="text-base text-gray-500 inline">@if($results != null) {{$career->pclave}} @endif</p><br>
                     <p class="text-base text-gray-600 font-bold inline rounded-lg">Descripcion: </p> <p class="text-base text-gray-500 inline">@if($results != null) {{$career->description}} @endif</p>
                 </div>
             </div>

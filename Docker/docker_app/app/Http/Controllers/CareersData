@@ -1,0 +1,102 @@
+<?php
+
+    if($career == 'Licenciatura en Artes Audiovisuales'){
+        return 'Artes Audiovisuales';
+    }if($career == 'Licenciatura en Artes Escénicas'){
+        return 'Artes Escénicas';
+    }if($career == 'Licenciatura en Artes Visuales'){
+        return 'Artes Visuales';
+    }if($career == 'Licenciatura en Diseño de Interiores y Ambientación'){
+        return 'Diseño de Interiores y Ambientación';
+    }if($career == 'Licenciatura en Diseño de Modas'){
+        return 'Diseño de Modas';
+    }if($career == 'Licenciatura en Diseño Industrial'){
+        return 'Diseño Industrial';
+    }if($career == 'Licenciatura en Diseño para la Comunicación Gráfica'){
+        return 'Diseño para la Comunicación Gráfica';
+    }if($career == 'Licenciatura en Diseño de Artesanías'){
+        return 'Diseño de Artesanías';
+    }if($career == 'Licenciatura en Medicina Veterinaria y Zootecnia'){
+        return 'Medicina Veterinaria y Zootecnia';
+    }if($career == 'Médico Cirujano y Partero'){
+        return 'Médico Cirujano y Partero';
+    }if($career == 'Licenciatura en Cirujano Dentista'){
+        return 'Cirujano Dentista';
+    }if($career == 'Enfermería'){
+        return 'Enfermería';
+    }if($career == 'Licenciatura en Nutrición'){
+        return 'Nutrición';
+    }if($career == 'Licenciatura en Psicología'){
+        return 'Psicología';
+    }if($career == 'Licenciatura en Cultura Física y Deportes'){
+        return 'Cultura Física y Deportes';
+    }if($career == 'Licenciatura en Antropología'){
+        return 'Antropología';
+    }if($career == 'Licenciatura en Historia'){
+        return 'Historia';
+    }if($career == 'Licenciatura en Letras Hispánicas'){
+        return 'Letras Hispánicas';
+    }if($career == 'Licenciatura en Relaciones Internacionales'){
+        return 'Relaciones Internacionales';
+    }if($career == 'Licenciatura en Sociología'){
+        return 'Sociología';
+    }if($career == 'Licenciatura en Trabajo Social'){
+        return 'Trabajo Social';
+    }if($career == 'Licenciatura en Ingeniero Agrónomo'){
+        return 'Agrónomo';
+    }if($career == 'Licenciatura en Ingeniería Biomédica'){
+        return 'Biomédica';
+    }if($career == 'Licenciatura en Ingeniería Civil'){
+        return 'Civil';
+    }if($career == 'Licenciatura en Ingeniería en Computación'){
+        return 'Computación';
+    }if($career == 'Licenciatura en Ingeniería Industrial'){
+        return 'Industrial';
+    }if($career == 'Licenciatura en Ingeniería Mecánica Eléctrica'){
+        return 'Mecánica Eléctrica';
+    }if($career == 'Licenciatura en Ingeniería Topográfica'){
+        return 'Topográfica';
+    }if($career == 'Ingeniería en Videojuegos'){
+        return 'Videojuegos';
+    }if($career == 'Licenciatura en Administración'){
+        return 'Administración';
+    }if($career == 'Licenciatura en Negocios Internacionales'){
+        return 'Negocios Internacionales';
+    }if($career == 'Licenciatura en Recursos Humanos'){
+        return 'Recursos Humanos';
+    }if($career == 'Licenciatura en Mercadotecnia'){
+        return 'Mercadotecnia';
+    }if($career == 'Licenciatura en Biología'){
+        return 'Biología';
+    }if($career == 'Licenciatura en Ciencia de los Alimentos'){
+        return 'Ciencia de los Alimentos';
+    }if($career == 'Licenciatura en Física'){
+        return 'Física';
+    }if($career == 'Licenciatura en Matemáticas'){
+        return 'Matemáticas';
+    }if($career == 'Licenciatura en Química'){
+        return 'Química';
+    }if($career == 'Licenciatura en Comunicación Pública'){
+        return 'Comunicación Pública';
+    }if($career == 'Licenciatura en Periodismo'){
+        return 'Periodismo';
+    }if($career == 'Licenciatura en Lengua Extranjera'){
+        return 'Lengua Extranjera';
+    }if($career == 'Licenciatura en Estudios Políticos y Gobierno'){
+        return 'Estudios Políticos y Gobierno';
+    }if($career == 'Licenciatura en Filosofía'){
+        return 'Filosofía';
+    }if($career == 'Licenciatura en Pedagogía'){
+        return 'Pedagogía';
+    }if($career == 'Licenciatura en Educación'){
+        return 'Educación';
+    }if($career == 'Licenciatura en Turismo'){
+        return 'Turismo';
+    }if($career == 'Licenciatura en Desarrollo Turístico Sustentable'){
+        return 'Desarrollo Turístico Sustentable';
+    }
+
+
+    return 'No Career';
+
+?>

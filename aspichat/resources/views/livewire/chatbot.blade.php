@@ -71,8 +71,6 @@
 
 
 
-
-
             {{-- SE MUESTRAN PREGUNTAS Y RESPUESTAS DEL CHATBOT --}}
             @foreach($allMsg as $index => $msg)
                 
@@ -105,8 +103,16 @@
                         scrollableDiv.scrollTop = scrollableDiv.scrollHeight;
                     </script>
                 @endif
-                
+
             @endforeach
+
+            
+            {{--@if($i == count($questions))
+                
+                <div class="flex w-full justify-center items-center">
+                    <button wire:click="storeChat" class="bg-blue-600 rounded-md text-white font-bold py-2 px-4 my-1">Ver Resultados</button>
+                </div>
+            @endif--}}
 
             <div class="flex w-full justify-center items-center">
                 <button wire:click="storeChat" class="bg-blue-600 rounded-md text-white font-bold py-2 px-4 my-1">Ver Resultados</button>
@@ -162,13 +168,12 @@
                         </p>
                     </div>
                 </div>
+                
             @else
                 
             @endif
 
      
-            
-
         </main>
 
     </div>
@@ -176,7 +181,7 @@
     
 
     <!-- Footer -->
-    <footer class="mt-2 p-8 shadow-md bg-white p-4 w-full md:w-4/5 lg:w-3/4">
+    <footer class="mt-2 shadow-md bg-white p-8 w-full md:w-4/5 lg:w-3/4">
 
         @if($i < count($questions))
             <div class="px-4">
@@ -206,7 +211,8 @@
             <div class="px-4">
                 <p class="bg-purple-900 rounded-md text-white flex justify-center font-bold p-2">¡Chat completado!</p>
             </div>
-            <div class="px-4"> {{-- VER RESULTADOS--}}
+            {{-- VER RESULTADOS--}}
+            <div class="px-4"> 
                 <button wire:click="storeChat" class="bg-purple-600 rounded-md text-white font-bold p-2 my-1 w-full">Ver Resultados</button>
             </div>
 
@@ -225,25 +231,6 @@
 
 
 <style>
-    /* Estilos personalizados para el Sticky Footer */
-    .wrapper {
-        min-height: calc(100vh - 15rem); /* Toma el 100% de la altura visible menos el tamaño del footer */
-    }
-
-    .fondochat {
-        background-image: url('{{ asset('images/backchat.jpg') }}');
-        background-position: center; 
-        background-repeat: no-repeat; 
-        background-size: cover;
-    }
-
-    .scroll-container {
-        max-height: 400px; /* Altura máxima del contenedor */
-        overflow-y: auto; /* Agregar barra de desplazamiento vertical si es necesario */
-        border: 1px solid #ccc;
-        padding: 10px;
-        box-sizing: border-box;
-    }
 
 </style>
 

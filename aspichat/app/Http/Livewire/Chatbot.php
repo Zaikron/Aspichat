@@ -159,6 +159,7 @@ class Chatbot extends Component
     }
 
     private function predictions(){
+
         $this->phrases = [
             "Explorar tecnología en mi tiempo libre es mi pasión.",
             "Soy hábil en resolver problemas informáticos y programar.",
@@ -177,14 +178,14 @@ class Chatbot extends Component
         ];
         
         //IP del host que hace los calculos
-        $response = Http::post('http://192.168.0.108:3000/realizar-prediccion', [
+        $response = Http::post('http://192.168.0.200:3000/realizar-prediccion', [
             'phrases' => $this->phrases,
         ]);
         
         $resultado = $response->json();
         $this->career = $resultado;
+
         //dd($this->career);
-        //dd($this->phrases);
     }
 
     public $centerNames = [];  // Arreglo para almacenar los nombres de los centros
@@ -192,16 +193,6 @@ class Chatbot extends Component
     public function recomCareers(){
         //$career = Career::where('id', $this->idCareer)->first(); 
         $this->careers = Career::where('pclave', $this->career)->get();
-
-
-        /*foreach ($careers as $c){
-            $centers = $c->centers;  // Obtener todos los centros relacionados con la carrera
-            foreach ($centers as $center) {
-                $this->centerNames[] = $center->name;  // Agregar el nombre del centro al arreglo
-            }
-        }*/
-
-        //dd($centerNames);  // Imprimir el arreglo de nombres de centros
     }
 
     
