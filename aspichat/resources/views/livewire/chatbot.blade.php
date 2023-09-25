@@ -1,5 +1,3 @@
-
-
 <div class="flex flex-col py-8 items-center bg-gray-100 h-screen">
 
     <div class="shadow-md w-full md:w-4/5 lg:w-3/4 h-3/4">
@@ -23,40 +21,27 @@
             <div class="flex justify-start py-2">
                 <img class="h-8 w-8 rounded-full my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/bot.png') }}" alt="">
                 <div>
-                    <p class="py-3 px-10 rounded-md text-white bg-purple-700" style="word-wrap: break-word; max-width: 400px;">
+                    <p class="py-3 px-10 rounded-md text-white bg-purple-700 fade-in" style="word-wrap: break-word; max-width: 400px;">
                         Bienvenido al chat!!!
                     </p>
                 </div>
             </div>
             <div class="flex justify-start py-2">
-                <img class="h-8 w-8 rounded-full my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/bot.png') }}" alt="">
+                <img class="h-8 w-8 rounded-full my-2 mx-1 border-2 border-gray-400 fade-in" src="{{ asset('images/bot.png') }}" alt="">
                 <div>
-                    <p class="py-3 px-10 rounded-md text-white bg-purple-700" style="word-wrap: break-word; max-width: 400px;">
+                    <p class="py-3 px-10 rounded-md text-white bg-purple-700 fade-in" style="word-wrap: break-word; max-width: 400px;">
                         A continuacion te realizare una serie de preguntas para poder determinar la mejor opcion respecto a tus cualidades
                     </p>
                 </div>
             </div>
             <div class="flex justify-start py-2">
-                <img class="h-8 w-8 rounded-full my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/bot.png') }}" alt="">
+                <img class="h-8 w-8 rounded-full my-2 mx-1 border-2 border-gray-400 fade-in" src="{{ asset('images/bot.png') }}" alt="">
                 <div>
-                    <p class="py-3 px-10 rounded-md text-white bg-purple-700" style="word-wrap: break-word; max-width: 400px;">
+                    <p class="py-3 px-10 rounded-md text-white bg-purple-700 fade-in" style="word-wrap: break-word; max-width: 400px;">
                         Por lo tanto comenzare mostrandote la primera pregunta de varias...
                     </p>
                 </div>
             </div>
-
-
-            {{--@for($j = 0; $j <= 10 - 1; $j++)
-                <div class="flex justify-start py-2">
-                    <img class="h-8 w-8 rounded-full my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/bot.png') }}" alt="">
-                    <div>
-                        <p class="py-3 px-10 rounded-md text-white bg-purple-700" style="word-wrap: break-word; max-width: 400px;">
-                            Por lo tanto comenzare mostrandote la primera pregunta de varias...
-                        </p>
-                    </div>
-                </div>
-            @endfor--}}
-
 
             {{-- SE GUARDAN LAS PREGUNTAS Y RESPUESTAS --}}
             @for($j = 0; $j <= $i - 1; $j++)
@@ -78,7 +63,7 @@
                     <div class="flex justify-start py-2">
                         <img class="h-8 w-8 rounded-full my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/bot.png') }}" alt="">
                         <div>
-                            <p class="py-3 px-10 rounded-md text-white bg-purple-700" style="word-wrap: break-word; max-width: 400px;">
+                            <p class="py-3 px-10 rounded-md text-white bg-purple-700 fade-in" style="word-wrap: break-word; max-width: 400px;">
                                 {{$msg}}
                             </p>
                         </div>
@@ -86,7 +71,7 @@
                 @else
                     <div class="flex justify-end py-2">
                         <div>
-                            <p class="py-3 px-10 rounded-md text-white bg-purple-500" style="word-wrap: break-word; max-width: 400px;">
+                            <p class="py-3 px-10 rounded-md text-white bg-purple-500 fade-in" style="word-wrap: break-word; max-width: 400px;">
                                 {{$msg}}
                             </p>
                         </div>
@@ -188,12 +173,24 @@
                 <p class="bg-purple-900 rounded-md text-white flex justify-center font-bold p-2">{{ $questions[$i] }}</p>
             </div>
             
-            <div class="relative mt-2 rounded-md shadow-sm px-4">
-                <input id="message" wire:model="message" type="text" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Escribe tu respuesta...">
+            <!-- <div class="mx-auto w-3/4 lg:w-2/3">
+                <div class="flex bg-white rounded-lg shadow-md p-3">
+                    <input wire:keydown.enter="submitAnswer" id="message" wire:model="message" type="text" class="flex-1 outline-none border-none focus:ring-0 px-2" placeholder="Escribe tu respuesta...">
+                    <button id="scrollToBottomButton" wire:click="submitAnswer" class="ml-2 px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:ring focus:ring-indigo-400">
+                        Enviar
+                    </button>
+                </div>
+            </div> -->
+
+
+            <div class="relative mt-2 rounded-md shadow-sm px-4 ">
+                <input wire:keydown.enter="submitAnswer" id="message" wire:model="message" type="text" class="  block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Escribe tu respuesta...">
                 
-                <div class="absolute inset-y-0 right-0 flex items-center">
+                <div class="absolute inset-y-0 right-0 flex items-center   ">
                     @if ($message)
-                        <button id="scrollToBottomButton" wire:click="submitAnswer" class="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-blue-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
+
+
+                        <button id="scrollToBottomButton" wire:click="submitAnswer" class="ml-2 px-4 h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-blue-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
                             <img class="h-8 w-8" src="{{ asset('images/enviar.png') }}" alt="">
                         </button>
                         @else
@@ -229,12 +226,6 @@
 </div>
 
 
-
-<style>
-
-</style>
-
-
 <script>
     
     /*const parrafo = document.getElementById('contenido-parrafo');
@@ -247,3 +238,22 @@
 
 </script>
 
+<style>
+    .fade-in {
+    opacity: 0; /* Inicialmente, el elemento estará oculto */
+    animation: fadeIn 1s ease-in-out forwards; /* Animación de Fade In durante 1 segundo */
+    }
+
+        @keyframes fadeIn {
+        from {
+            opacity: 0; /* Inicio de la animación con opacidad 0 */
+        }
+        to {
+            opacity: 1; /* Opacidad completa al final de la animación */
+        }
+    }
+</style>
+
+<!-- NOTAS -->
+<!-- Agrege la posibilidad de tener un enter para mandar informacion directamente (Completo) -->
+<!-- AQUI ESTA TODO SACE CON CNTRL Z -->

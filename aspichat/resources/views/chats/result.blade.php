@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="shortcut icon" href="{{ asset('images/icon.png') }}">
+    </head>
+</html>
+
 <x-app-layout>
 
     <div class="justify-center items-center flex bg-gray-100">

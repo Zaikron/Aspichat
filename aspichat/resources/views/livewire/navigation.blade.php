@@ -20,7 +20,7 @@
             <a href="/" class="flex flex-shrink-0 items-center">
               <img class="h-8 w-auto" src="{{ asset('images/icon.png') }}" alt="Your Company">
             </a>
-            <div class="px-2 justify-center my-2">
+            <div class="px-2 justify-center my-2 mt-4">
               <p class="font-bold text-2xl">Aspichat</p>
             </div>
 
