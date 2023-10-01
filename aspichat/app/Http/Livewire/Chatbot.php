@@ -21,6 +21,7 @@ class Chatbot extends Component
     public $phrases = [];
     public $idCareer;
     public $careers;
+    public $isLoading = false; //Para el boton de resultados
 
     public $questions = [
         '¿Que te gusta hacer en tus tiempos libres?',
@@ -61,6 +62,8 @@ class Chatbot extends Component
     }
 
     public function storeChat(){
+        //Boton cargando
+        $this->isLoading = true;
         //Predicciones
         foreach ($this->chatHistory as $chat) {
             $this->phrases[] = $chat['answer'];
@@ -161,24 +164,24 @@ class Chatbot extends Component
     private function predictions(){
 
         $this->phrases = [
-            "Explorar tecnología en mi tiempo libre es mi pasión.",
-            "Soy hábil en resolver problemas informáticos y programar.",
-            "Destaco en ser paciente y creativo al encontrar soluciones tecnológicas.",
-            "Mi dominio más fuerte es la programación.",
-            "Disfruto codificar proyectos personales y probar nuevas herramientas tecnológicas.",
-            "Me siento más capaz en análisis técnico y solución de problemas en informática.",
-            "Soy desarrollador de software, creando aplicaciones para resolver problemas.",
-            "Mis logros incluyen proyectos de software que han mejorado vidas.",
-            "Optimizar sistemas y mejorar códigos desafiantes es lo que me motiva.",
-            "Enfrento desafíos dividiéndolos en partes y aprendiendo rápidamente.",
-            "Mantengo la motivación al superar obstáculos y aprender en situaciones difíciles.",
-            "Para investigar, establezco objetivos, recopilo y analizo información de múltiples fuentes.",
-            "Quiero aprender más sobre inteligencia artificial, desarrollo de aplicaciones y seguridad.",
-            "Busco mejorar habilidades de trabajo en equipo y comunicación técnica.",
+            "Explorar tecnología en mi tiempo libre es mi pasión",
+            "Soy hábil en resolver problemas informáticos y programar",
+            "Destaco en ser paciente y creativo al encontrar soluciones tecnológicas",
+            "Mi dominio más fuerte es la programación",
+            "Disfruto codificar proyectos personales y probar nuevas herramientas tecnológicas",
+            "Me siento más capaz en análisis técnico y solución de problemas en informática",
+            "Soy desarrollador de software, creando aplicaciones para resolver problemas",
+            "Mis logros incluyen proyectos de software que han mejorado vidas",
+            "Optimizar sistemas y mejorar códigos desafiantes es lo que me motiva",
+            "Enfrento desafíos dividiéndolos en partes y aprendiendo rápidamente",
+            "Mantengo la motivación al superar obstáculos y aprender en situaciones difíciles",
+            "Para investigar, establezco objetivos, recopilo y analizo información de múltiples fuentes",
+            "Quiero aprender más sobre inteligencia artificial, desarrollo de aplicaciones y seguridad",
+            "Busco mejorar habilidades de trabajo en equipo y comunicación técnica",
         ];
         
         //IP del host que hace los calculos
-        $response = Http::post('http://192.168.0.200:3000/realizar-prediccion', [
+        $response = Http::post('http://localhost:3000/realizar-prediccion', [
             'phrases' => $this->phrases,
         ]);
         

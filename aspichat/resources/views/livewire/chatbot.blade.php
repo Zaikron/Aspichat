@@ -2,16 +2,6 @@
 
     <div class="shadow-md w-full md:w-4/5 lg:w-3/4 h-3/4">
 
-        {{-- {!! Form::open(['route' => 'chats.store', 'method' => 'post']) !!}
-        {!! Form::hidden('n1', 1) !!}
-        {!! Form::hidden('n2', 2) !!}
-        {!! Form::button('Sumar', ['class' => 'py-2 px-5 rounded-md text-white bg-green-700', 'type' => 'submit']) !!}
-        {!! Form::close() !!} --}}
-        <!-- Cabecera -->
-        {{--<header class="border-2 border-purple-400 shadow-lg bg-purple-100 p-4 flex justify-center">
-            <img class="h-12 w-12 rounded-full" src="{{ asset('images/chat.png') }}" alt="">
-        </header>--}}
-
         <!-- Cuerpo con Scroll -->
         <main class="overflow-y-auto h-full bg-white p-4 no-scrollbar" id="scrollableDiv">
             <div class="flex justify-center">
@@ -93,15 +83,18 @@
 
             
             {{--@if($i == count($questions))
-                
                 <div class="flex w-full justify-center items-center">
-                    <button wire:click="storeChat" class="bg-blue-600 rounded-md text-white font-bold py-2 px-4 my-1">Ver Resultados</button>
+                    @if (!$isLoading)
+                        <button id="chat-button" wire:click="storeChat" class="bg-blue-600 rounded-md text-white font-bold py-2 px-4 my-1">Ver Resultados</button>
+                    @endif
                 </div>
             @endif--}}
-
             <div class="flex w-full justify-center items-center">
-                <button wire:click="storeChat" class="bg-blue-600 rounded-md text-white font-bold py-2 px-4 my-1">Ver Resultados</button>
+                @if (!$isLoading)
+                    <button id="resBtn" wire:click="storeChat" class="bg-blue-600 rounded-md text-white font-bold py-2 px-4 my-1">Ver Resultados</button>
+                @endif
             </div>
+
 
             @if($careers != null)
                 <div class="flex justify-start py-2">
@@ -167,21 +160,12 @@
 
     <!-- Footer -->
     <footer class="mt-2 shadow-md bg-white p-8 w-full md:w-4/5 lg:w-3/4">
+        
 
         @if($i < count($questions))
             <div class="px-4">
                 <p class="bg-purple-900 rounded-md text-white flex justify-center font-bold p-2">{{ $questions[$i] }}</p>
             </div>
-            
-            <!-- <div class="mx-auto w-3/4 lg:w-2/3">
-                <div class="flex bg-white rounded-lg shadow-md p-3">
-                    <input wire:keydown.enter="submitAnswer" id="message" wire:model="message" type="text" class="flex-1 outline-none border-none focus:ring-0 px-2" placeholder="Escribe tu respuesta...">
-                    <button id="scrollToBottomButton" wire:click="submitAnswer" class="ml-2 px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:ring focus:ring-indigo-400">
-                        Enviar
-                    </button>
-                </div>
-            </div> -->
-
 
             <div class="relative mt-2 rounded-md shadow-sm px-4 ">
                 <input wire:keydown.enter="submitAnswer" id="message" wire:model="message" type="text" class="  block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Escribe tu respuesta...">
@@ -222,29 +206,34 @@
                 </div>
             </div>
         @endif
+        
     </footer>
 </div>
 
 
 <script>
-    
-    /*const parrafo = document.getElementById('contenido-parrafo');
-    const boton = document.getElementById('cambiar-boton');
-    const nuevoContenido = 'Este es el nuevo contenido del párrafo al hacer clic en el botón.';
 
-    boton.addEventListener('click', () => {
-        parrafo.textContent = nuevoContenido;
-    });*/
+    document.getElementById('resBtn').addEventListener('click', function () {
+        // Cambiar el texto del botón a "Cargando..."
+        this.innerText = 'Cargando...';
+
+        // Ejecutar la función que toma tiempo en completarse
+        // Puedes reemplazar esto con tu lógica real
+        setTimeout(function () {
+            // Una vez que la función haya terminado, ocultar el botón
+            document.getElementById('resBtn').style.display = 'none';
+        }, 2000);
+    });
 
 </script>
 
 <style>
     .fade-in {
-    opacity: 0; /* Inicialmente, el elemento estará oculto */
-    animation: fadeIn 1s ease-in-out forwards; /* Animación de Fade In durante 1 segundo */
+        opacity: 0; /* Inicialmente, el elemento estará oculto */
+        animation: fadeIn 1s ease-in-out forwards; /* Animación de Fade In durante 1 segundo */
     }
 
-        @keyframes fadeIn {
+    @keyframes fadeIn {
         from {
             opacity: 0; /* Inicio de la animación con opacidad 0 */
         }
@@ -252,8 +241,6 @@
             opacity: 1; /* Opacidad completa al final de la animación */
         }
     }
+    
 </style>
 
-<!-- NOTAS -->
-<!-- Agrege la posibilidad de tener un enter para mandar informacion directamente (Completo) -->
-<!-- AQUI ESTA TODO SACE CON CNTRL Z -->
