@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\ResultController;
+use App\Http\Controllers\InfoController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,6 +15,9 @@ Route::get('/', function () {
 Route::resource('chat', ChatController::class)->names('chats')->middleware('auth');
 
 Route::get('result', [ResultController::class, 'index'])->name('chats.result')->middleware('auth');
+
+Route::get('info/{career}', [InfoController::class, 'show'])->name('chats.info');
+
 
 Route::middleware([
     'auth:sanctum',

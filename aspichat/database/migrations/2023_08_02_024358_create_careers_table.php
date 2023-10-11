@@ -12,12 +12,15 @@ return new class extends Migration
             $table->id();
 
             $table->string('name');
-            $table->text('description');
+            //$table->text('description');
             $table->string('url');
             $table->string('pclave');
 
             $table->unsignedBigInteger('area_id');
             $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
+
+            $table->unsignedBigInteger('characteristic_id');
+            $table->foreign('characteristic_id')->references('id')->on('characteristics')->onDelete('cascade');
 
             $table->timestamps();
         });

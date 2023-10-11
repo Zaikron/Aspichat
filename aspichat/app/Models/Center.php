@@ -18,4 +18,8 @@ class Center extends Model
     public function careers(){
         return $this->belongsToMany(Career::class);
     }
+
+    public function buses(){
+        return $this->belongsToMany(Bus::class);
+    }
 }

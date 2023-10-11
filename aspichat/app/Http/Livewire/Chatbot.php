@@ -180,13 +180,39 @@ class Chatbot extends Component
             "Busco mejorar habilidades de trabajo en equipo y comunicación técnica",
         ];
         
-        //IP del host que hace los calculos
+        //CALCULOS DE PROBABILIDADES
         $response = Http::post('http://localhost:3000/realizar-prediccion', [
             'phrases' => $this->phrases,
         ]);
-        
         $resultado = $response->json();
         $this->career = $resultado;
+
+
+
+        // URL de la imagen en el servidor remoto
+        $imagen_url = 'http://localhost:3000/obtener-imagen';
+        // Nombre y ruta del archivo de destino en tu servidor, el nombre de la imagen sera el id del usuario
+        $ruta_destino = public_path('images/graphs/' . auth()->user()->id . '.jpg');
+        // Realiza una solicitud GET para obtener la imagen
+        $imagen_data = file_get_contents($imagen_url);
+
+        // Comprueba si la solicitud fue exitosa
+        if ($imagen_data !== false) {
+            // Guarda los datos de la imagen en un archivo local
+            file_put_contents($ruta_destino, $imagen_data);
+        } else {
+            // Maneja el caso en que la solicitud no fue exitosa
+            echo "No se pudo obtener la imagen";
+        }
+
+
+        /*$response2 = Http::get('http://localhost:3000/obtener-imagen');
+        if ($response2->successful()) {
+            $imageData = $response2->body();
+            file_put_contents(public_path('images/graphs/graph.jpg'), $imageData);
+        } else {
+            echo "No se pudo obtener la imagen";
+        }*/
 
         //dd($this->career);
     }

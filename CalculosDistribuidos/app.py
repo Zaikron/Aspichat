@@ -4,8 +4,9 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.preprocessing import LabelEncoder
 from tensorflow.keras.models import load_model
 import pickle
+import matplotlib.pyplot as plt
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 
 
     #Abrir todos los modelos y tokenizers
@@ -126,9 +127,11 @@ def realizar_prediccion():
             areas_probabilidades[area] += prob
                 
 
+    tabla_areas = []
     # Imprimir las sumas de probabilidades por área
     for area, suma_probabilidad in areas_probabilidades.items():
-        print(f"Área: {area}, Suma de Probabilidades: {suma_probabilidad}")
+        #print(f"Área: {area}, Suma de Probabilidades: {suma_probabilidad}")
+        tabla_areas.append({"area": area, "prob": suma_probabilidad})
 
     # Obtencion de la mejor area
     area_mayor_probabilidad = max(areas_probabilidades, key=areas_probabilidades.get)
@@ -242,17 +245,65 @@ def realizar_prediccion():
 
             careers_probabilidades[career] += probc
 
+    tabla_carreras = []
     # Imprimir las sumas de probabilidades por área
     for career, suma_probabilidadC in careers_probabilidades.items():
-        print(f"Área: {career}, Suma de Probabilidades: {suma_probabilidadC}")
+        #print(f"Área: {career}, Suma de Probabilidades: {suma_probabilidadC}")
+        tabla_carreras.append({"carrera": career, "prob": suma_probabilidadC})
+
+
+    # Imprimir la tabla de probabilidades
+    for area in tabla_areas:
+        print(f"Area: {area['area']}, Probabilidad: {area['prob']}")
+
+    for carrera in tabla_carreras:
+        print(f"Carrera: {carrera['carrera']}, Probabilidad: {carrera['prob']}")
+
     
     # Obtencion de la mejor career
     career_mayor_probabilidad = max(careers_probabilidades, key=careers_probabilidades.get)
     print(f"Carrera con Mayor Probabilidad Acumulada: {career_mayor_probabilidad}")
 
 
+
+    # GRAFICAS
+    # Crear una figura y ejes para ambas gráficas
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(8, 8))
+
+    # Gráfica 1: Probabilidades por Área (azul)
+    ax1.bar([area['area'] for area in tabla_areas], [area['prob'] for area in tabla_areas], color='#1E90FF')
+    ax1.set_title('Probabilidades por Área')
+    ax1.set_ylabel('Probabilidad')
+
+    # Personalizar etiquetas en el eje x de la primera gráfica
+    ax1.set_xticklabels([area['area'] for area in tabla_areas], rotation=90)  # Rotar etiquetas en 90 grados
+
+    # Gráfica 2: Probabilidades por Carrera (morada)
+    ax2.bar([carrera['carrera'] for carrera in tabla_carreras], [carrera['prob'] for carrera in tabla_carreras], color='#800080')
+    ax2.set_title('Probabilidades por Carrera')
+    ax2.set_ylabel('Probabilidad')
+
+    # Personalizar etiquetas en el eje x de la segunda gráfica
+    ax2.set_xticklabels([carrera['carrera'] for carrera in tabla_carreras], rotation=90)  # Rotar etiquetas en 90 grados
+
+    # Ajustar el espacio entre las gráficas
+    plt.tight_layout()
+
+    # Guardar la figura como una imagen JPG
+    plt.savefig(f'graph/usergraph.jpg')
+
+
     resultado = career_mayor_probabilidad
     return jsonify(resultado)
+
+
+@app.route('/obtener-imagen', methods=['GET'])
+def obtener_imagen():
+    # Ruta a la imagen que deseas enviar
+    imagen_path = f'graph/usergraph.jpg'
+
+    return send_file(imagen_path, mimetype='image/jpeg')
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=3000)
@@ -267,5 +318,6 @@ pip install flask
 pip install pandas
 pip install tensorflow
 pip install scikit-learn==1.2.2
+pip install matplotlib
 python app.py
 """

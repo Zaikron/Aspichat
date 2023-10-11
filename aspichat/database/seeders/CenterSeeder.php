@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Center;
 use App\Models\Career;
+use App\Models\Bus;
 
 class CenterSeeder extends Seeder
 {
@@ -352,6 +353,13 @@ class CenterSeeder extends Seeder
         $_center15->careers()->attach(Career::find(192));
         $_center15->careers()->attach(Career::find(193));
 
+
+        /*************************************************************************/
+        /*** Buses ***/
+        /*** Centro Universitario de Ciencias Exactas e Ingenierías ***/
+        $_center4->buses()->attach(Bus::find(1));
+        $_center4->buses()->attach(Bus::find(2));
+        $_center4->buses()->attach(Bus::find(3));
 
 
     }

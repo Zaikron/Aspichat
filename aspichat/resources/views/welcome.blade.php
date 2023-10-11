@@ -209,7 +209,7 @@
 <!-- Carrusel de Areas -->
 <div class="container mt-5 py-5 w-75 h-100">
 	 <div class="row h-50 w-100 d-flex align-items-center">
-		<div id="carouselExampleInterval" class="carousel slide col-lg col-md-100 col-sm-100 border border-2 rounded shadow-lg h-100" data-bs-ride="carousel">
+		<div id="carouselExampleInterval" class="carousel slide col-lg col-md-100 col-sm-100 border-2 rounded shadow-lg h-100" data-bs-ride="carousel">
 		  <div class="carousel-inner p-4 d-flex align-items-center h-100">
 				 
 				<!-- Artes -->

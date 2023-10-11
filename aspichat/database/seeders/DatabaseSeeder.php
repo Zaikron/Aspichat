@@ -4,9 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Area;
-use App\Models\Career;
-use App\Models\Center;
 use App\Models\Message;
 
 class DatabaseSeeder extends Seeder
@@ -15,6 +12,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(RoleSeeder::class);
 
+        $this->call(BusSeeder::class);
+        $this->call(CharacteristicSeeder::class);
         $this->call(UserSeeder::class);
 
         $this->call(AreaSeeder::class);

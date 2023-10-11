@@ -101,7 +101,7 @@
                     <img class="h-8 w-8 rounded-full my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/bot.png') }}" alt="">
                     <div>
                         <p class="py-3 px-10 rounded-md text-white bg-purple-700" style="word-wrap: break-word; max-width: 400px;">
-                            La carrera que va a corde a tus caracteristicas es del campo de: <b>{{$this->career}}</b>
+                            El area que va a corde a tus caracteristicas esta relacionada con el campo de: <b>{{$this->career}}</b>
                         </p>
                     </div>
                 </div>
@@ -109,6 +109,15 @@
                     <img class="h-8 w-8 rounded-full my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/bot.png') }}" alt="">
                     <div>
                         <p class="py-3 px-10 rounded-md text-white bg-purple-700" style="word-wrap: break-word; max-width: 400px;">
+                            Aqui te muestro una grafica con los resultados obtenidos: 
+                        </p>
+                        <img class="rounded-md my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/graphs/' . auth()->user()->id . '.jpg') }}" alt="" width="550px" height="550px">
+                    </div>
+                </div>
+                <div class="flex justify-start py-2">
+                    <img class="h-8 w-8 rounded-full my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/bot.png') }}" alt="">
+                    <div>
+                        <p class="py-3 px-10 rounded-md text-white bg-purple-700 font-bold" style="word-wrap: break-word; max-width: 400px;">
                             A continuacion te muestro todas las opciones de UDG que tienes a tu eleccion y que son las mejores para ti:
                         </p>
                     </div>
@@ -117,13 +126,16 @@
                     <div class="flex justify-start py-2">
                         <img class="h-8 w-8 rounded-full my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/bot.png') }}" alt="">
                         <div class="rounded-md bg-purple-700 py-4" style="word-wrap: break-word; max-width: 500px;">
-                            <p class="py-3 px-10 text-white">
+                            <p class="py-1 px-10 text-white">
                                 <b>Carrera:</b> {{$c->name}}
                             </p>
-                            <p class="py-3 px-10 text-white">
+                            <p class="py-1 px-10 text-white">
                                 <b>Sede:</b> {{$c->centers->first()->name}}
                             </p>
-                            <div class="w-full flex justify-center items-center">
+                            <a href="{{ route('chats.info', ['career' => $c]) }}" class="w-full flex justify-center bg-purple-500 p-2 font-bold text-purple-50 shadow-md" target="_blank">
+                                Mas Información
+                            </a>
+                            {{--<div class="w-full flex justify-center items-center">
                                 <img class="h-40 w-64 rounded-md my-2 mx-1 border-2 border-gray-400" src="{{ asset($c->centers->first()->image) }}" alt="">
                             </div>
                             <p class="py-3 px-10 text-white">
@@ -134,7 +146,7 @@
                             </p>
                             <p class="py-3 px-10 text-white">
                                 <b>Descripción:</b> {{$c->description}}
-                            </p>
+                            </p>--}}
                         </div>
                     </div>
                 @endforeach
@@ -222,7 +234,7 @@
         setTimeout(function () {
             // Una vez que la función haya terminado, ocultar el botón
             document.getElementById('resBtn').style.display = 'none';
-        }, 2000);
+        }, 4000);
     });
 
 </script>

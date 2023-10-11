@@ -13,6 +13,7 @@ class Career extends Model
         'description',
         'url',
         'area_id',
+        'characteristic_id',
     ];
 
     public function centers(){
@@ -25,6 +26,10 @@ class Career extends Model
 
     public function results(){
         return $this->hasMany(Result::class);
+    }
+
+    public function characteristics(){
+        return $this->belongsTo(Characteristic::class);
     }
     
 }

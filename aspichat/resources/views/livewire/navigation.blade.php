@@ -15,7 +15,7 @@
               @endauth
           </div>
           
-          <div class="flex flex-1 items-center justify-center items-stretch md:justify-start lg:justify-start ">
+          <div class="flex flex-1 items-center justify-center md:justify-start lg:justify-start ">
             {{-- Logo --}}
             <a href="/" class="flex flex-shrink-0 items-center">
               <img class="h-8 w-auto" src="{{ asset('images/icon.png') }}" alt="Your Company">
