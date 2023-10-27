@@ -66,7 +66,9 @@
             </div>
             <div class="text-gray-700 text-start bg-white shadow-md rounded-lg border-2 px-8 py-4 m-2 flex justify-center"> 
                 @if($results != null)
-                    <img class="rounded-md my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/graphs/' . auth()->user()->id . '.jpg') }}" alt="" width="700px" height="700px">
+                    <a href="{{ asset('images/graphs/' . auth()->user()->id . '.jpg') }}" target="_blank">
+                        <img class="rounded-md my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/graphs/' . auth()->user()->id . '.jpg') }}" alt="" width="700px" height="700px">
+                    </a>
                 @endif
             </div>
         </div>

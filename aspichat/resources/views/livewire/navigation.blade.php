@@ -3,11 +3,10 @@
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
           {{-- Boton Menu --}}
-          <div class="absolute inset-y-0 left-0 flex items-center sm:visible md:invisible lg:invisible">
+          <div class="absolute inset-y-0 left-0 flex justify-center text-gray-400 px-2 mt-2 font-bold w-full
+                items-end md:items-center lg:items-center lg:py-2 text-xs md:text-base lg:text-lg truncate">
               @auth
-                  <div class="text-gray-400 rounded-md px-3 py-2 mt-2 text-md font-medium">
-                      {{auth()->user()->name}}
-                  </div>
+                    {{auth()->user()->name}}
                   @else
                   {{--<div class="bg-gray-900 text-black rounded-md px-3 py-2 text-sm font-medium">
                       Bienvenido a Aspichat
@@ -15,13 +14,13 @@
               @endauth
           </div>
           
-          <div class="flex flex-1 items-center justify-center md:justify-start lg:justify-start ">
+          <div class="flex justify-center md:justify-start lg:justify-start ">
             {{-- Logo --}}
-            <a href="/" class="flex flex-shrink-0 items-center">
+            <a href="/" class="flex flex-shrink-0 items-center relative px-2">
               <img class="h-8 w-auto" src="{{ asset('images/icon.png') }}" alt="Your Company">
             </a>
             <div class="px-2 justify-center my-2 mt-4">
-              <p class="font-bold text-2xl">Aspichat</p>
+              <p class="font-bold text-2xl hidden md:block lg:block">Aspichat</p>
             </div>
 
             {{-- Menu --}}
@@ -105,8 +104,8 @@
               </div>
           @else
               <div>
-                  <a href="{{ route('login') }}" class="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium">Iniciar Sesion</a>
-                  <a href="{{ route('register') }}" class="text-gray-600 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-md font-medium">Registrarme</a>
+                  <a href="{{ route('login') }}" class="relative text-gray-700 hover:bg-gray-700 hover:text-white py-2 rounded-md text-sm md:text-md lg:text-lg font-bold">Iniciar Sesion |</a>
+                  <a href="{{ route('register') }}" class="relative text-gray-700 hover:bg-gray-700 hover:text-white py-2 rounded-md text-sm md:text-md lg:text-lg font-bold">Registrarme</a>
               </div>
       @endauth
 

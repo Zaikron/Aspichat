@@ -28,7 +28,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=30',
             'pclave' => 'Artes Audiovisuales',
             'area_id' => 1,
-            'characteristic_id' => 1,
+            'characteristic_id' => 2,
         ]);
         $career3 = Career::create([
             'id' => 3,
@@ -36,7 +36,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=32',
             'pclave' => 'Artes Escénicas',
             'area_id' => 1,
-            'characteristic_id' => 1,
+            'characteristic_id' => 3,
         ]);
         $career4 = Career::create([
             'id' => 4,
@@ -44,7 +44,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=41',
             'pclave' => 'Artes Escénicas',
             'area_id' => 1,
-            'characteristic_id' => 1,
+            'characteristic_id' => 4,
         ]);
         $career5 = Career::create([
             'id' => 5,
@@ -52,7 +52,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=46',
             'pclave' => 'Artes Visuales',
             'area_id' => 1,
-            'characteristic_id' => 1,
+            'characteristic_id' => 5,
         ]);
         $career6 = Career::create([
             'id' => 6,
@@ -60,7 +60,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=50',
             'pclave' => 'Artes Visuales',
             'area_id' => 1,
-            'characteristic_id' => 1,
+            'characteristic_id' => 6,
         ]);
         $career7 = Career::create([
             'id' => 7,
@@ -68,7 +68,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=80',
             'pclave' => 'Diseño de Interiores y Ambientación',
             'area_id' => 2,
-            'characteristic_id' => 1,
+            'characteristic_id' => 7,
         ]);
         $career8 = Career::create([
             'id' => 8,
@@ -76,7 +76,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=832',
             'pclave' => 'Diseño de Modas',
             'area_id' => 2,
-            'characteristic_id' => 1,
+            'characteristic_id' => 8,
         ]);
         $career9 = Career::create([
             'id' => 9,
@@ -84,7 +84,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=84',
             'pclave' => 'Diseño Industrial',
             'area_id' => 2,
-            'characteristic_id' => 1,
+            'characteristic_id' => 9,
         ]);
         $career10 = Career::create([
             'id' => 10,
@@ -92,7 +92,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=87',
             'pclave' => 'Diseño para la Comunicación Gráfica',
             'area_id' => 2,
-            'characteristic_id' => 1,
+            'characteristic_id' => 10,
         ]);
         $career11 = Career::create([
             'id' => 11,
@@ -100,7 +100,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=199',
             'pclave' => 'Artes Audiovisuales',
             'area_id' => 1,
-            'characteristic_id' => 1,
+            'characteristic_id' => 11,
         ]);
         $career12 = Career::create([
             'id' => 12,
@@ -108,7 +108,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=254',
             'pclave' => 'Biología',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 12,
         ]); 
 
         //Se agregaron los 'characteristic_id' => 1, Arriba
@@ -136,7 +136,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=23',
             'pclave' => 'Negocios Internacionales',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 13,
         ]);
         $career14 = Career::create([
             'id' => 14,
@@ -144,7 +144,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=57',
             'pclave' => 'Biología',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 14,
         ]);
         $career15 = Career::create([
             'id' => 15,
@@ -152,7 +152,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=62',
             'pclave' => 'Ciencia de los Alimentos',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 15,
         ]);
         $career16 = Career::create([
             'id' => 16,
@@ -160,7 +160,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=179',
             'pclave' => 'Agrónomo',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 16,
         ]);
         $career17 = Career::create([
             'id' => 17,
@@ -168,7 +168,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=189',
             'pclave' => 'Medicina Veterinaria y Zootecnia',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 17,
         ]);
         
         // Se agregaron los 'characteristic_id' => 1, Arriba
@@ -187,7 +187,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-administracion/',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 18,
         ]);
         $career19 = Career::create([
             'id' => 19,
@@ -195,7 +195,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-administracion/',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 19,
         ]);
         $career20 = Career::create([
             'id' => 20,
@@ -203,7 +203,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-administracion/',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 20,
         ]);
         $career21 = Career::create([
             'id' => 21,
@@ -211,7 +211,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=68',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 21,
         ]);
         $career22 = Career::create([
             'id' => 22,
@@ -219,7 +219,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=92',
             'pclave' => 'Administración',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 22,
         ]);
         $career23 = Career::create([
             'id' => 23,
@@ -227,7 +227,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=808',
             'pclave' => 'Biología',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 23,
         ]);
         $career24 = Career::create([
             'id' => 24,
@@ -235,7 +235,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=193',
             'pclave' => 'Mercadotecnia',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 24,
         ]);
         $career25 = Career::create([
             'id' => 25,
@@ -243,7 +243,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=204',
             'pclave' => 'Negocios Internacionales',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 25,
         ]);
         $career26 = Career::create([
             'id' => 26,
@@ -251,7 +251,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=226',
             'pclave' => 'Recursos Humanos',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 26,
         ]);
         $career27 = Career::create([
             'id' => 27,
@@ -259,7 +259,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-tecnologias-de-la-informacion/',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 27,
         ]);
         $career28 = Career::create([
             'id' => 28,
@@ -267,7 +267,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=252',
             'pclave' => 'Turismo',
             'area_id' => 10,
-            'characteristic_id' => 1,
+            'characteristic_id' => 28,
         ]);
         
         // Se agregaron los 'characteristic_id' => 1, Arriba
@@ -292,7 +292,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=115',
             'pclave' => 'Física',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 30,
         ]);
         $career31 = Career::create([
             'id' => 31,
@@ -300,7 +300,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/ingenieria-en-informatica/',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 31,
         ]);
         $career32 = Career::create([
             'id' => 32,
@@ -308,7 +308,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=138',
             'pclave' => 'Biomédica',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 32,
         ]);
         $career33 = Career::create([
             'id' => 33,
@@ -316,7 +316,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=142',
             'pclave' => 'Civil',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 33,
         ]);
         $career34 = Career::create([
             'id' => 34,
@@ -324,7 +324,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=877',
             'pclave' => 'Química',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 34,
         ]);
         $career35 = Career::create([
             'id' => 35,
@@ -332,7 +332,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=146',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 35,
         ]);
         $career36 = Career::create([
             'id' => 36,
@@ -340,7 +340,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=150',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 36,
         ]);
         $career37 = Career::create([
             'id' => 37,
@@ -348,7 +348,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=168',
             'pclave' => 'Industrial',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 37,
         ]);
         $career38 = Career::create([
             'id' => 38,
@@ -356,7 +356,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=170',
             'pclave' => 'Mecánica Eléctrica',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 38,
         ]);
         $career39 = Career::create([
             'id' => 39,
@@ -364,7 +364,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=175',
             'pclave' => 'Química',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 39,
         ]);
         $career40 = Career::create([
             'id' => 40,
@@ -372,7 +372,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=177',
             'pclave' => 'Topográfica',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 40,
         ]);
         $career41 = Career::create([
             'id' => 41,
@@ -380,7 +380,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=186',
             'pclave' => 'Matemáticas',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 41,
         ]);
         $career42 = Career::create([
             'id' => 42,
@@ -388,7 +388,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=220',
             'pclave' => 'Química',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 42,
         ]);
         $career43 = Career::create([
             'id' => 43,
@@ -396,7 +396,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=222',
             'pclave' => 'Química',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 43,
         ]);
         // Se agregaron los 'characteristic_id' => 1, Arriba
         $_center = Center::find(4);
@@ -423,7 +423,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=102',
             'pclave' => 'Enfermería',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 44,
         ]);
         $career45 = Career::create([
             'id' => 45,
@@ -431,7 +431,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=191',
             'pclave' => 'Médico Cirujano y Partero',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 45,
         ]);
         $career46 = Career::create([
             'id' => 46,
@@ -439,7 +439,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=64',
             'pclave' => 'Cirujano Dentista',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 46,
         ]);
         $career47 = Career::create([
             'id' => 47,
@@ -447,7 +447,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=72',
             'pclave' => 'Cultura Física y Deportes',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 47,
         ]);
         $career48 = Career::create([
             'id' => 48,
@@ -455,7 +455,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=104',
             'pclave' => 'Enfermería',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 48,
         ]);
         $career49 = Career::create([
             'id' => 49,
@@ -463,7 +463,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=206',
             'pclave' => 'Nutrición',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 49,
         ]);
         $career50 = Career::create([
             'id' => 50,
@@ -471,7 +471,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=218',
             'pclave' => 'Psicología',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 50,
         ]);
         
         // Se agregaron los 'characteristic_id' => 1, Arriba
@@ -492,7 +492,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=25',
             'pclave' => 'Antropología',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 51,
         ]);
         $career52 = Career::create([
             'id' => 52,
@@ -500,7 +500,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=66',
             'pclave' => 'Comunicación Pública',
             'area_id' => 8,
-            'characteristic_id' => 1,
+            'characteristic_id' => 52,
         ]);
         $career53 = Career::create([
             'id' => 53,
@@ -508,7 +508,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=75',
             'pclave' => 'Relaciones Internacionales',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 53,
         ]);
         $career54 = Career::create([
             'id' => 54,
@@ -516,7 +516,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=77',
             'pclave' => 'Lengua Extranjera',
             'area_id' => 9,
-            'characteristic_id' => 1,
+            'characteristic_id' => 54,
         ]);
         $career55 = Career::create([
             'id' => 55,
@@ -524,7 +524,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=89',
             'pclave' => 'Lengua Extranjera',
             'area_id' => 9,
-            'characteristic_id' => 1,
+            'characteristic_id' => 55,
         ]);
         $career56 = Career::create([
             'id' => 56,
@@ -532,7 +532,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=111',
             'pclave' => 'Estudios Políticos y Gobierno',
             'area_id' => 9,
-            'characteristic_id' => 1,
+            'characteristic_id' => 56,
         ]);
         $career57 = Career::create([
             'id' => 57,
@@ -540,7 +540,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=113',
             'pclave' => 'Filosofía',
             'area_id' => 9,
-            'characteristic_id' => 1,
+            'characteristic_id' => 57,
         ]);
         $career58 = Career::create([
             'id' => 58,
@@ -548,7 +548,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=117',
             'pclave' => 'Historia',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 58,
         ]);
         $career59 = Career::create([
             'id' => 59,
@@ -556,7 +556,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=126',
             'pclave' => 'Historia',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 59,
         ]);
         $career60 = Career::create([
             'id' => 60,
@@ -564,7 +564,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=184',
             'pclave' => 'Letras Hispánicas',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 60,
         ]);
         $career61 = Career::create([
             'id' => 61,
@@ -572,7 +572,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=109',
             'pclave' => 'Relaciones Internacionales',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 61,
         ]);
         $career62 = Career::create([
             'id' => 62,
@@ -580,7 +580,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=240',
             'pclave' => 'Sociología',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 62,
         ]);
         $career63 = Career::create([
             'id' => 63,
@@ -588,7 +588,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=248',
             'pclave' => 'Trabajo Social',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 63,
         ]);
         $career64 = Career::create([
             'id' => 64,
@@ -596,7 +596,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=481',
             'pclave' => 'Trabajo Social',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 64,
         ]);
         
         // Se agregaron los 'characteristic_id' => 1, Arriba
@@ -624,7 +624,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/carrera-de-medico-cirujano-y-partero/?programa=0',
             'pclave' => 'Médico Cirujano y Partero',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 45,
         ]);
         $career66 = Career::create([
             'id' => 66,
@@ -632,7 +632,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-administracion-de-negocios/?programa=0',
             'pclave' => 'Negocios Internacionales',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 18,
         ]);
         $career67 = Career::create([
             'id' => 67,
@@ -640,7 +640,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-contaduria-publica/?programa=0',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 21,
         ]);
         $career68 = Career::create([
             'id' => 68,
@@ -648,7 +648,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-derecho-o-abogado/?programa=0',
             'pclave' => 'Relaciones Internacionales',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 53,
         ]);
         $career69 = Career::create([
             'id' => 69,
@@ -656,7 +656,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-diseno-de-artesanias/?programa=0',
             'pclave' => 'Diseño de Artesanías',
             'area_id' => 2,
-            'characteristic_id' => 1,
+            'characteristic_id' => 67,
         ]);
         $career70 = Career::create([
             'id' => 70,
@@ -664,7 +664,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-estudios-liberales/?programa=0',
             'pclave' => 'Letras Hispánicas',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 68,
         ]);
         $career71 = Career::create([
             'id' => 71,
@@ -672,7 +672,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-gerontologia/?programa=0',
             'pclave' => 'Psicología',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 69,
         ]);
         $career72 = Career::create([
             'id' => 72,
@@ -680,7 +680,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-historia-del-arte/?programa=0',
             'pclave' => 'Historia',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 70,
         ]);
         $career73 = Career::create([
             'id' => 73,
@@ -688,7 +688,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/lic-en-ingenieria-en-ciencias-computacionales/?programa=0',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 71,
         ]);
         $career74 = Career::create([
             'id' => 74,
@@ -696,7 +696,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/lic-en-ingenieria-en-energia/?programa=0',
             'pclave' => 'Mecánica Eléctrica',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 72,
         ]);
         $career75 = Career::create([
             'id' => 75,
@@ -704,7 +704,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/ingenieria-en-nanotecnologia/?programa=0',
             'pclave' => 'Química',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 73,
         ]);
         $career76 = Career::create([
             'id' => 76,
@@ -712,7 +712,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-nutricion/?programa=0',
             'pclave' => 'Nutrición',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 49,
         ]);
         $career77 = Career::create([
             'id' => 77,
@@ -720,7 +720,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licencitatura-en-salud-publica/?programa=0',
             'pclave' => 'Nutrición',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 74,
         ]);
         
         // Se agregaron los 'characteristic_id' => 1, Arriba
@@ -747,7 +747,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=191',
             'pclave' => 'Médico Cirujano y Partero',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 45,
         ]);
         $career79 = Career::create([
             'id' => 79,
@@ -755,7 +755,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-administracion/',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 18,
         ]);
         $career80 = Career::create([
             'id' => 80,
@@ -763,7 +763,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=64',
             'pclave' => 'Cirujano Dentista',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 46,
         ]);
         $career81 = Career::create([
             'id' => 81,
@@ -771,7 +771,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=68',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 21,
         ]);
         $career82 = Career::create([
             'id' => 82,
@@ -779,7 +779,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=75',
             'pclave' => 'Relaciones Internacionales',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 53,
         ]);
         $career83 = Career::create([
             'id' => 83,
@@ -787,7 +787,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=104',
             'pclave' => 'Enfermería',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 48,
         ]);
         $career84 = Career::create([
             'id' => 84,
@@ -795,7 +795,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=136',
             'pclave' => 'Agrónomo',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 95,
         ]);
         $career85 = Career::create([
             'id' => 85,
@@ -803,7 +803,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=146',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 35,
         ]);
         $career86 = Career::create([
             'id' => 86,
@@ -811,7 +811,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=161',
             'pclave' => 'Agrónomo',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 96,
         ]);
         $career87 = Career::create([
             'id' => 87,
@@ -819,7 +819,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=189',
             'pclave' => 'Medicina Veterinaria y Zootecnia',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 17,
         ]);
         $career88 = Career::create([
             'id' => 88,
@@ -827,7 +827,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=204',
             'pclave' => 'Negocios Internacionales',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 25,
         ]);
         $career89 = Career::create([
             'id' => 89,
@@ -835,7 +835,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=206',
             'pclave' => 'Nutrición',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 49,
         ]);
         $career90 = Career::create([
             'id' => 90,
@@ -843,7 +843,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=218',
             'pclave' => 'Psicología',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 50,
         ]);
         
         // Se agregaron los 'characteristic_id' => 1, Arriba
@@ -870,7 +870,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=191',
             'pclave' => 'Médico Cirujano y Partero',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 45,
         ]);
         $career92 = Career::create([
             'id' => 92,
@@ -878,7 +878,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-administracion/',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 18,
         ]);
         $career93 = Career::create([
             'id' => 93,
@@ -894,7 +894,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-artes-visuales-para-la-expresion-plastica/',
             'pclave' => 'Artes Visuales',
             'area_id' => 1,
-            'characteristic_id' => 1,
+            'characteristic_id' => 6,
         ]);
         $career95 = Career::create([
             'id' => 95,
@@ -902,7 +902,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-artes-visuales-para-la-expresion-fotografica/',
             'pclave' => 'Artes Visuales',
             'area_id' => 1,
-            'characteristic_id' => 1,
+            'characteristic_id' => 5,
         ]);
         $career96 = Career::create([
             'id' => 96,
@@ -910,7 +910,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/ciencias-y-artes-culinarias/',
             'pclave' => 'Artes Visuales',
             'area_id' => 1,
-            'characteristic_id' => 1,
+            'characteristic_id' => 75,
         ]);
         $career97 = Career::create([
             'id' => 97,
@@ -918,7 +918,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-cultura-fisica-y-deportes/',
             'pclave' => 'Cultura Física y Deportes',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 47,
         ]);
         $career98 = Career::create([
             'id' => 98,
@@ -926,7 +926,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-nutricion/',
             'pclave' => 'Nutrición',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 49,
         ]);
         $career99 = Career::create([
             'id' => 99,
@@ -934,7 +934,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/ingenieria-en-videojuegos/',
             'pclave' => 'Videojuegos',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 76,
         ]);
         $career100 = Career::create([
             'id' => 100,
@@ -942,7 +942,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=57',
             'pclave' => 'Biología',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 14,
         ]);
         $career101 = Career::create([
             'id' => 101,
@@ -950,7 +950,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=68',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 21,
         ]);
         $career102 = Career::create([
             'id' => 102,
@@ -958,7 +958,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=75',
             'pclave' => 'Relaciones Internacionales',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 53,
         ]);
         $career103 = Career::create([
             'id' => 103,
@@ -966,7 +966,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=87',
             'pclave' => 'Diseño para la Comunicación Gráfica',
             'area_id' => 2,
-            'characteristic_id' => 1,
+            'characteristic_id' => 10,
         ]);
         $career104 = Career::create([
             'id' => 104,
@@ -974,7 +974,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=104',
             'pclave' => 'Enfermería',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 48,
         ]);
         $career105 = Career::create([
             'id' => 105,
@@ -982,7 +982,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=142',
             'pclave' => 'Civil',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 33,
         ]);
         $career106 = Career::create([
             'id' => 106,
@@ -990,7 +990,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=146',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 35,
         ]);
         $career107 = Career::create([
             'id' => 107,
@@ -998,7 +998,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=148',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 77,
         ]);
         $career108 = Career::create([
             'id' => 108,
@@ -1006,7 +1006,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=166',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 78,
         ]);
         $career109 = Career::create([
             'id' => 109,
@@ -1014,7 +1014,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=218',
             'pclave' => 'Psicología',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 50,
         ]);
         $career110 = Career::create([
             'id' => 110,
@@ -1022,7 +1022,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=252',
             'pclave' => 'Turismo',
             'area_id' => 10,
-            'characteristic_id' => 1,
+            'characteristic_id' => 28,
         ]);
         
         // Se agregaron los 'characteristic_id' => 1, Arriba
@@ -1056,7 +1056,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-administracion/',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 18,
         ]);
         $career112 = Career::create([
             'id' => 112,
@@ -1064,7 +1064,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=20',
             'pclave' => 'Biología',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 79,
         ]);
         $career113 = Career::create([
             'id' => 113,
@@ -1072,7 +1072,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=23',
             'pclave' => 'Negocios Internacionales',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 13,
         ]);
         $career114 = Career::create([
             'id' => 114,
@@ -1080,7 +1080,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=68',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 21,
         ]);
         $career115 = Career::create([
             'id' => 115,
@@ -1088,7 +1088,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=75',
             'pclave' => 'Relaciones Internacionales',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 53,
         ]);
         $career116 = Career::create([
             'id' => 116,
@@ -1096,7 +1096,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/ingenieria-en-informatica/',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 31,
         ]);
         $career117 = Career::create([
             'id' => 117,
@@ -1104,7 +1104,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=146',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 35,
         ]);
         $career118 = Career::create([
             'id' => 118,
@@ -1112,7 +1112,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=155',
             'pclave' => 'Civil',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 80,
         ]);
         $career119 = Career::create([
             'id' => 119,
@@ -1120,7 +1120,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=168',
             'pclave' => 'Industrial',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 37,
         ]);
         $career120 = Career::create([
             'id' => 120,
@@ -1128,7 +1128,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=175',
             'pclave' => 'Química',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 39,
         ]);
         $career121 = Career::create([
             'id' => 121,
@@ -1136,7 +1136,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=193',
             'pclave' => 'Mercadotecnia',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 24,
         ]);
         $career122 = Career::create([
             'id' => 122,
@@ -1144,7 +1144,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=204',
             'pclave' => 'Negocios Internacionales',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 25,
         ]);
         $career123 = Career::create([
             'id' => 123,
@@ -1152,7 +1152,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=211',
             'pclave' => 'Periodismo',
             'area_id' => 8,
-            'characteristic_id' => 1,
+            'characteristic_id' => 81,
         ]);
         $career124 = Career::create([
             'id' => 124,
@@ -1160,7 +1160,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=218',
             'pclave' => 'Psicología',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 50,
         ]);
         $career125 = Career::create([
             'id' => 125,
@@ -1168,7 +1168,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=222',
             'pclave' => 'Química',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 43,
         ]);
         $career126 = Career::create([
             'id' => 126,
@@ -1176,7 +1176,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=226',
             'pclave' => 'Recursos Humanos',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 26,
         ]);
         
         // Se agregaron los 'characteristic_id' => 1, Arriba
@@ -1206,7 +1206,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/ingenieria-en-videojuegos/',
             'pclave' => 'Videojuegos',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 76,
         ]);
         $career128 = Career::create([
             'id' => 128,
@@ -1214,7 +1214,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-administracion/',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 18,
         ]);
         $career129 = Career::create([
             'id' => 129,
@@ -1222,7 +1222,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=68',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 21,
         ]);
         $career130 = Career::create([
             'id' => 130,
@@ -1230,7 +1230,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=75',
             'pclave' => 'Relaciones Internacionales',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 53,
         ]);
         $career131 = Career::create([
             'id' => 131,
@@ -1238,7 +1238,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=130',
             'pclave' => 'Sociología',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 51,
         ]);
         $career132 = Career::create([
             'id' => 132,
@@ -1246,7 +1246,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/ingenieria-en-informatica/',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 31,
         ]);
         $career133 = Career::create([
             'id' => 133,
@@ -1254,7 +1254,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=140',
             'pclave' => 'Química',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 83,
         ]);
         $career134 = Career::create([
             'id' => 134,
@@ -1262,7 +1262,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=144',
             'pclave' => 'Administración',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 84,
         ]);
         $career135 = Career::create([
             'id' => 135,
@@ -1270,7 +1270,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=146',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 35,
         ]);
         $career136 = Career::create([
             'id' => 136,
@@ -1278,7 +1278,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=150',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 36,
         ]);
         $career137 = Career::create([
             'id' => 137,
@@ -1286,7 +1286,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=153',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 85,
         ]);
         $career138 = Career::create([
             'id' => 138,
@@ -1294,7 +1294,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=168',
             'pclave' => 'Industrial',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 37,
         ]);
         $career139 = Career::create([
             'id' => 139,
@@ -1302,7 +1302,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=170',
             'pclave' => 'Mecánica Eléctrica',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 38,
         ]);
         $career140 = Career::create([
             'id' => 140,
@@ -1310,7 +1310,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=172',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 86,
         ]);
         $career141 = Career::create([
             'id' => 141,
@@ -1318,7 +1318,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-periodismo/?programa=0',
             'pclave' => 'Periodismo',
             'area_id' => 8,
-            'characteristic_id' => 1,
+            'characteristic_id' => 81,
         ]);
         $career142 = Career::create([
             'id' => 142,
@@ -1326,7 +1326,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=218',
             'pclave' => 'Psicología',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 50,
         ]);
         $career143 = Career::create([
             'id' => 143,
@@ -1334,7 +1334,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-tecnologias-de-la-informacion/',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 27,
         ]);
         
         // Se agregaron los 'characteristic_id' => 1, Arriba
@@ -1364,7 +1364,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-administracion/',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 18,
         ]);
         $career145 = Career::create([
             'id' => 145,
@@ -1372,7 +1372,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=60',
             'pclave' => 'Biología',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 14,
         ]);
         $career146 = Career::create([
             'id' => 146,
@@ -1380,7 +1380,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=68',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 21,
         ]);
         $career147 = Career::create([
             'id' => 147,
@@ -1388,7 +1388,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=75',
             'pclave' => 'Relaciones Internacionales',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 53,
         ]);
         $career148 = Career::create([
             'id' => 148,
@@ -1396,7 +1396,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=157',
             'pclave' => 'Negocios Internacionales',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 89,
         ]);
         $career149 = Career::create([
             'id' => 149,
@@ -1404,7 +1404,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=159',
             'pclave' => 'Biología',
             'area_id' => 7,
-            'characteristic_id' => 1,
+            'characteristic_id' => 90,
         ]);
         $career150 = Career::create([
             'id' => 150,
@@ -1412,7 +1412,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=172',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 86,
         ]);
         $career151 = Career::create([
             'id' => 151,
@@ -1420,7 +1420,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=179',
             'pclave' => 'Agrónomo',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 16,
         ]);
         $career152 = Career::create([
             'id' => 152,
@@ -1428,7 +1428,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=206',
             'pclave' => 'Nutrición',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 49,
         ]);
         $career153= Career::create([
             'id' => 153,
@@ -1436,7 +1436,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=252',
             'pclave' => 'Turismo',
             'area_id' => 10,
-            'characteristic_id' => 1,
+            'characteristic_id' => 28,
         ]);
         
         // Se agregaron los 'characteristic_id' => 1, Arriba
@@ -1460,7 +1460,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=102',
             'pclave' => 'Enfermería',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 44,
         ]);
         $career156 = Career::create([
             'id' => 156,
@@ -1468,7 +1468,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-administracion/',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 18,
         ]);
         $career157 = Career::create([
             'id' => 157,
@@ -1476,7 +1476,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=23',
             'pclave' => 'Negocios Internacionales',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 13,
         ]);
         $career158 = Career::create([
             'id' => 158,
@@ -1484,7 +1484,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=25',
             'pclave' => 'Antropología',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 51,
         ]);
         $career159 = Career::create([
             'id' => 159,
@@ -1492,7 +1492,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.u   dg.mx/?p=68',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 21,
         ]);
         $career160 = Career::create([
             'id' => 160,
@@ -1500,7 +1500,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=75',
             'pclave' => 'Relaciones Internacionales',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 53,
         ]);
         $career161 = Career::create([
             'id' => 161,
@@ -1508,7 +1508,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=104',
             'pclave' => 'Enfermería',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 48,
         ]);
         $career162 = Career::create([
             'id' => 162,
@@ -1516,7 +1516,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=153',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 85,
         ]);
         $career163 = Career::create([
             'id' => 163,
@@ -1524,7 +1524,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=166',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 78,
         ]);
         $career164 = Career::create([
             'id' => 164,
@@ -1532,7 +1532,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=206',
             'pclave' => 'Nutrición',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 49,
         ]);
         $career165 = Career::create([
             'id' => 165,
@@ -1540,7 +1540,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=218',
             'pclave' => 'Psicología',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 50,
         ]);
         $career166 = Career::create([
             'id' => 166,
@@ -1548,7 +1548,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=252',
             'pclave' => 'Turismo',
             'area_id' => 10,
-            'characteristic_id' => 1,
+            'characteristic_id' => 28,
         ]);
         
         // Se agregaron los 'characteristic_id' => 1, Arriba
@@ -1574,7 +1574,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=102',
             'pclave' => 'Enfermería',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 44,
         ]);
         $career168 = Career::create([
             'id' => 168,
@@ -1582,7 +1582,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=191',
             'pclave' => 'Médico Cirujano y Partero',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 45,
         ]);
         $career169 = Career::create([
             'id' => 169,
@@ -1590,7 +1590,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=23',
             'pclave' => 'Negocios Internacionales',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 13,
         ]);
         $career170 = Career::create([
             'id' => 170,
@@ -1598,7 +1598,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=75',
             'pclave' => 'Relaciones Internacionales',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 53,
         ]);
         $career171 = Career::create([
             'id' => 171,
@@ -1606,7 +1606,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=964',
             'pclave' => 'Desarrollo Turístico Sustentable',
             'area_id' => 10,
-            'characteristic_id' => 1,
+            'characteristic_id' => 91,
         ]);
         $career172 = Career::create([
             'id' => 172,
@@ -1614,7 +1614,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=104',
             'pclave' => 'Enfermería',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 48,
         ]);
         $career173 = Career::create([
             'id' => 173,
@@ -1622,7 +1622,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=166',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 78,
         ]);
         $career174 = Career::create([
             'id' => 174,
@@ -1630,7 +1630,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=184',
             'pclave' => 'Letras Hispánicas',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 60,
         ]);
         $career175 = Career::create([
             'id' => 175,
@@ -1638,7 +1638,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=189',
             'pclave' => 'Medicina Veterinaria y Zootecnia',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 17,
         ]);
         $career176 = Career::create([
             'id' => 176,
@@ -1646,7 +1646,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=204',
             'pclave' => 'Negocios Internacionales',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 25,
         ]);
         $career177 = Career::create([
             'id' => 177,
@@ -1654,7 +1654,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=206',
             'pclave' => 'Nutrición',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 49,
         ]);
         $career178 = Career::create([
             'id' => 178,
@@ -1662,7 +1662,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=211',
             'pclave' => 'Periodismo',
             'area_id' => 8,
-            'characteristic_id' => 1,
+            'characteristic_id' => 81,
         ]);
         $career179 = Career::create([
             'id' => 179,
@@ -1670,7 +1670,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=218',
             'pclave' => 'Psicología',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 50,
         ]);
         $career180 = Career::create([
             'id' => 180,
@@ -1678,7 +1678,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=929',
             'pclave' => 'Trabajo Social',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 92,
         ]);
         
         // Se agregaron los 'characteristic_id' => 1, Arriba
@@ -1706,7 +1706,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-administracion/',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 18,
         ]);
         $career182 = Career::create([
             'id' => 182,
@@ -1714,7 +1714,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=23',
             'pclave' => 'Negocios Internacionales',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 13,
         ]);
         $career183 = Career::create([
             'id' => 183,
@@ -1722,7 +1722,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=68',
             'pclave' => 'Administración',
             'area_id' => 6,
-            'characteristic_id' => 1,
+            'characteristic_id' => 21,
         ]);
         $career184 = Career::create([
             'id' => 184,
@@ -1730,7 +1730,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=75',
             'pclave' => 'Relaciones Internacionales',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 53,
         ]);
         $career185 = Career::create([
             'id' => 185,
@@ -1738,7 +1738,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=94',
             'pclave' => 'Educación',
             'area_id' => 9,
-            'characteristic_id' => 1,
+            'characteristic_id' => 93,
         ]);
         $career186 = Career::create([
             'id' => 186,
@@ -1746,7 +1746,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=153',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 85,
         ]);
         $career187 = Career::create([
             'id' => 187,
@@ -1754,7 +1754,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=172',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 86,
         ]);
         $career188 = Career::create([
             'id' => 188,
@@ -1762,7 +1762,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=218',
             'pclave' => 'Psicología',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 50,
         ]);
         $career189 = Career::create([
             'id' => 189,
@@ -1770,7 +1770,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/licenciatura-en-tecnologias-de-la-informacion/',
             'pclave' => 'Computación',
             'area_id' => 5,
-            'characteristic_id' => 1,
+            'characteristic_id' => 27,
         ]);
         $career190 = Career::create([
             'id' => 190,
@@ -1778,7 +1778,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=248',
             'pclave' => 'Trabajo Social',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 63,
         ]);
         $career191 = Career::create([
             'id' => 191,
@@ -1786,7 +1786,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=481',
             'pclave' => 'Trabajo Social',
             'area_id' => 4,
-            'characteristic_id' => 1,
+            'characteristic_id' => 64,
         ]);
         $career192 = Career::create([
             'id' => 192,
@@ -1794,7 +1794,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=252',
             'pclave' => 'Turismo',
             'area_id' => 10,
-            'characteristic_id' => 1,
+            'characteristic_id' => 28,
         ]);
         $career193 = Career::create([
             'id' => 193,
@@ -1802,7 +1802,7 @@ class CareerSeeder extends Seeder
             'url' => 'http://guiadecarreras.udg.mx/?p=1190',
             'pclave' => 'Enfermería',
             'area_id' => 3,
-            'characteristic_id' => 1,
+            'characteristic_id' => 94,
         ]);
         
         // Se agregaron los 'characteristic_id' => 1, Arriba
@@ -1821,6 +1821,10 @@ class CareerSeeder extends Seeder
         $career192->centers()->attach($_center);
         $career193->centers()->attach($_center);
 
+
+
+
+        
         
         
 

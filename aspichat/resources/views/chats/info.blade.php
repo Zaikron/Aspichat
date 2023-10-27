@@ -59,7 +59,7 @@
 
             <div class="text-gray-700 text-start bg-white shadow-md rounded-lg border-2 p-8 m-2 items-center">
                 <div class="w-full flex items-center justify-center">
-                    <img class="h-80 w-128 rounded-md my-2 mx-1 border-2 border-gray-400" src="{{ asset($center->image) }}" alt="">
+                    <img class="h-40 md:h-60 lg:h-80 rounded-md my-2 mx-1 border-2 border-gray-400" src="{{ asset($center->image) }}" alt="">
                 </div>
                 <br>
                 <div class="py-2">

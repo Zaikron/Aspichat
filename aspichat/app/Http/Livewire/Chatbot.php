@@ -22,6 +22,7 @@ class Chatbot extends Component
     public $idCareer;
     public $careers;
     public $isLoading = false; //Para el boton de resultados
+    public $fast = true;
 
     public $questions = [
         '¿Que te gusta hacer en tus tiempos libres?',
@@ -61,6 +62,14 @@ class Chatbot extends Component
         $this->allMsg[] = $message;
     }
 
+    public function fastMode(){
+        if($this->fast == true){
+            $this->fast = false;
+        }else{
+            $this->fast = true;
+        }
+    }
+
     public function storeChat(){
         //Boton cargando
         $this->isLoading = true;
@@ -78,67 +87,77 @@ class Chatbot extends Component
         } else {
             dd('Carrera no encontrada');
         }
-        //Guardado de preguntas respuestas del usuario
-        Result::create([
-            /*'p1' => $this->chatHistory[0]['question'],
-            'p2' => $this->chatHistory[1]['question'],
-            'p3' => $this->chatHistory[2]['question'],
-            'p4' => $this->chatHistory[3]['question'],
-            'p5' => $this->chatHistory[4]['question'],
-            'p6' => $this->chatHistory[5]['question'],
-            'p7' => $this->chatHistory[6]['question'],
-            'p8' => $this->chatHistory[7]['question'],
-            'p9' => $this->chatHistory[8]['question'],
-            'p10' => $this->chatHistory[9]['question'],
-            'p11' => $this->chatHistory[10]['question'],
-            'p12' => $this->chatHistory[11]['question'],
-            'p13' => $this->chatHistory[12]['question'],
-            'p14' => $this->chatHistory[13]['question'],
-            'r1' => $this->chatHistory[0]['answer'],
-            'r2' => $this->chatHistory[1]['answer'],
-            'r3' => $this->chatHistory[2]['answer'],
-            'r4' => $this->chatHistory[3]['answer'],
-            'r5' => $this->chatHistory[4]['answer'],
-            'r6' => $this->chatHistory[5]['answer'],
-            'r7' => $this->chatHistory[6]['answer'],
-            'r8' => $this->chatHistory[7]['answer'],
-            'r9' => $this->chatHistory[8]['answer'],
-            'r10' => $this->chatHistory[9]['answer'],
-            'r11' => $this->chatHistory[10]['answer'],
-            'r12' => $this->chatHistory[11]['answer'],
-            'r13' => $this->chatHistory[12]['answer'],
-            'r14' => $this->chatHistory[13]['answer'],*/
-            'p1' => $this->questions[0],
-            'p2' => $this->questions[1],
-            'p3' => $this->questions[2],
-            'p4' => $this->questions[3],
-            'p5' => $this->questions[4],
-            'p6' => $this->questions[5],
-            'p7' => $this->questions[6],
-            'p8' => $this->questions[7],
-            'p9' => $this->questions[8],
-            'p10' => $this->questions[9],
-            'p11' => $this->questions[10],
-            'p12' => $this->questions[11],
-            'p13' => $this->questions[12],
-            'p14' => $this->questions[13],
-            'r1' => $this->phrases[0],
-            'r2' => $this->phrases[1],
-            'r3' => $this->phrases[2],
-            'r4' => $this->phrases[3],
-            'r5' => $this->phrases[4],
-            'r6' => $this->phrases[5],
-            'r7' => $this->phrases[6],
-            'r8' => $this->phrases[7],
-            'r9' => $this->phrases[8],
-            'r10' => $this->phrases[9],
-            'r11' => $this->phrases[10],
-            'r12' => $this->phrases[11],
-            'r13' => $this->phrases[12],
-            'r14' => $this->phrases[13],
-            'user_id' => auth()->user()->id,
-            'career_id' => $this->idCareer,
-        ]);
+
+
+        if($this->fast == true){
+            //Guardado de preguntas respuestas del usuario
+            Result::create([
+                'p1' => $this->questions[0],
+                'p2' => $this->questions[1],
+                'p3' => $this->questions[2],
+                'p4' => $this->questions[3],
+                'p5' => $this->questions[4],
+                'p6' => $this->questions[5],
+                'p7' => $this->questions[6],
+                'p8' => $this->questions[7],
+                'p9' => $this->questions[8],
+                'p10' => $this->questions[9],
+                'p11' => $this->questions[10],
+                'p12' => $this->questions[11],
+                'p13' => $this->questions[12],
+                'p14' => $this->questions[13],
+                'r1' => $this->phrases[0],
+                'r2' => $this->phrases[1],
+                'r3' => $this->phrases[2],
+                'r4' => $this->phrases[3],
+                'r5' => $this->phrases[4],
+                'r6' => $this->phrases[5],
+                'r7' => $this->phrases[6],
+                'r8' => $this->phrases[7],
+                'r9' => $this->phrases[8],
+                'r10' => $this->phrases[9],
+                'r11' => $this->phrases[10],
+                'r12' => $this->phrases[11],
+                'r13' => $this->phrases[12],
+                'r14' => $this->phrases[13],
+                'user_id' => auth()->user()->id,
+                'career_id' => $this->idCareer,
+            ]);
+        }else{
+            //Guardado de preguntas respuestas del usuario
+            Result::create([
+                'p1' => $this->chatHistory[0]['question'],
+                'p2' => $this->chatHistory[1]['question'],
+                'p3' => $this->chatHistory[2]['question'],
+                'p4' => $this->chatHistory[3]['question'],
+                'p5' => $this->chatHistory[4]['question'],
+                'p6' => $this->chatHistory[5]['question'],
+                'p7' => $this->chatHistory[6]['question'],
+                'p8' => $this->chatHistory[7]['question'],
+                'p9' => $this->chatHistory[8]['question'],
+                'p10' => $this->chatHistory[9]['question'],
+                'p11' => $this->chatHistory[10]['question'],
+                'p12' => $this->chatHistory[11]['question'],
+                'p13' => $this->chatHistory[12]['question'],
+                'p14' => $this->chatHistory[13]['question'],
+                'r1' => $this->chatHistory[0]['answer'],
+                'r2' => $this->chatHistory[1]['answer'],
+                'r3' => $this->chatHistory[2]['answer'],
+                'r4' => $this->chatHistory[3]['answer'],
+                'r5' => $this->chatHistory[4]['answer'],
+                'r6' => $this->chatHistory[5]['answer'],
+                'r7' => $this->chatHistory[6]['answer'],
+                'r8' => $this->chatHistory[7]['answer'],
+                'r9' => $this->chatHistory[8]['answer'],
+                'r10' => $this->chatHistory[9]['answer'],
+                'r11' => $this->chatHistory[10]['answer'],
+                'r12' => $this->chatHistory[11]['answer'],
+                'r13' => $this->chatHistory[12]['answer'],
+                'r14' => $this->chatHistory[13]['answer'],
+                'user_id' => auth()->user()->id,
+                'career_id' => $this->idCareer,
+            ]);
+        }
 
         $this->storeMessage();
         $this->recomCareers();
@@ -162,23 +181,25 @@ class Chatbot extends Component
     }
 
     private function predictions(){
-
-        $this->phrases = [
-            "Explorar tecnología en mi tiempo libre es mi pasión",
-            "Soy hábil en resolver problemas informáticos y programar",
-            "Destaco en ser paciente y creativo al encontrar soluciones tecnológicas",
-            "Mi dominio más fuerte es la programación",
-            "Disfruto codificar proyectos personales y probar nuevas herramientas tecnológicas",
-            "Me siento más capaz en análisis técnico y solución de problemas en informática",
-            "Soy desarrollador de software, creando aplicaciones para resolver problemas",
-            "Mis logros incluyen proyectos de software que han mejorado vidas",
-            "Optimizar sistemas y mejorar códigos desafiantes es lo que me motiva",
-            "Enfrento desafíos dividiéndolos en partes y aprendiendo rápidamente",
-            "Mantengo la motivación al superar obstáculos y aprender en situaciones difíciles",
-            "Para investigar, establezco objetivos, recopilo y analizo información de múltiples fuentes",
-            "Quiero aprender más sobre inteligencia artificial, desarrollo de aplicaciones y seguridad",
-            "Busco mejorar habilidades de trabajo en equipo y comunicación técnica",
-        ];
+        if($this->fast == true){
+            $this->phrases = [
+                "Explorar tecnología en mi tiempo libre es mi pasión",
+                "Soy hábil en resolver problemas informáticos y programar",
+                "Destaco en ser paciente y creativo al encontrar soluciones tecnológicas",
+                "Mi dominio más fuerte es la programación",
+                "Disfruto codificar proyectos personales y probar nuevas herramientas tecnológicas",
+                "Me siento más capaz en análisis técnico y solución de problemas en informática",
+                "Soy desarrollador de software, creando aplicaciones para resolver problemas",
+                "Mis logros incluyen proyectos de software que han mejorado vidas",
+                "Optimizar sistemas y mejorar códigos desafiantes es lo que me motiva",
+                "Enfrento desafíos dividiéndolos en partes y aprendiendo rápidamente",
+                "Mantengo la motivación al superar obstáculos y aprender en situaciones difíciles",
+                "Para investigar, establezco objetivos, recopilo y analizo información de múltiples fuentes",
+                "Quiero aprender más sobre inteligencia artificial, desarrollo de aplicaciones y seguridad",
+                "Busco mejorar habilidades de trabajo en equipo y comunicación técnica",
+            ];
+        }
+        
         
         //CALCULOS DE PROBABILIDADES
         $response = Http::post('http://localhost:3000/realizar-prediccion', [
@@ -186,7 +207,6 @@ class Chatbot extends Component
         ]);
         $resultado = $response->json();
         $this->career = $resultado;
-
 
 
         // URL de la imagen en el servidor remoto
@@ -217,10 +237,7 @@ class Chatbot extends Component
         //dd($this->career);
     }
 
-    public $centerNames = [];  // Arreglo para almacenar los nombres de los centros
-
     public function recomCareers(){
-        //$career = Career::where('id', $this->idCareer)->first(); 
         $this->careers = Career::where('pclave', $this->career)->get();
     }
 

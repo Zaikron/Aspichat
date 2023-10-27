@@ -1,4 +1,4 @@
-<div class="flex flex-col py-8 items-center bg-gray-100 h-screen">
+<div class="flex flex-col items-center h-screen bg-gray-50">
 
     <div class="shadow-md w-full md:w-4/5 lg:w-3/4 h-3/4">
 
@@ -111,7 +111,9 @@
                         <p class="py-3 px-10 rounded-md text-white bg-purple-700" style="word-wrap: break-word; max-width: 400px;">
                             Aqui te muestro una grafica con los resultados obtenidos: 
                         </p>
-                        <img class="rounded-md my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/graphs/' . auth()->user()->id . '.jpg') }}" alt="" width="550px" height="550px">
+                        <a href="{{ asset('images/graphs/' . auth()->user()->id . '.jpg') }}" target="_blank">
+                            <img class="rounded-md my-2 mx-1 border-2 border-gray-400" src="{{ asset('images/graphs/' . auth()->user()->id . '.jpg') }}" alt="" width="550px" height="550px">
+                        </a>
                     </div>
                 </div>
                 <div class="flex justify-start py-2">
@@ -220,6 +222,12 @@
         @endif
         
     </footer>
+
+
+    <div class="flex w-full justify-center items-center">
+        <button id="resBtn1" wire:click="fastMode" class="rounded-md text-green-700 font-bold py-2 px-4 my-1 mx-4 text-sm">Fast: {{$this->fast}}</button>
+    </div>
+
 </div>
 
 

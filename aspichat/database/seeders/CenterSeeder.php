@@ -356,10 +356,149 @@ class CenterSeeder extends Seeder
 
         /*************************************************************************/
         /*** Buses ***/
+        /*** Centro Universitario de Arte, Arquitectura y Diseño ***/
+        $_center1->buses()->attach(Bus::find(1));
+        $_center1->buses()->attach(Bus::find(2));
+        $_center1->buses()->attach(Bus::find(3));
+        $_center1->buses()->attach(Bus::find(4));
+        $_center1->buses()->attach(Bus::find(5));
+        $_center1->buses()->attach(Bus::find(6));
+        $_center1->buses()->attach(Bus::find(7));
+        $_center1->buses()->attach(Bus::find(8));
+        $_center1->buses()->attach(Bus::find(9));
+        $_center1->buses()->attach(Bus::find(10));
+        $_center1->buses()->attach(Bus::find(11));
+        $_center1->buses()->attach(Bus::find(12));
+        $_center1->buses()->attach(Bus::find(13));
+        $_center1->buses()->attach(Bus::find(14));
+        $_center1->buses()->attach(Bus::find(15));
+        $_center1->buses()->attach(Bus::find(16));
+        $_center1->buses()->attach(Bus::find(17));
+        $_center1->buses()->attach(Bus::find(18));
+        $_center1->buses()->attach(Bus::find(19));
+        $_center1->buses()->attach(Bus::find(20));
+
+        /*** Centro Universitario de Ciencias Biológicas y Agropecuarias ***/
+        $_center2->buses()->attach(Bus::find(21));
+        $_center2->buses()->attach(Bus::find(22));
+        $_center2->buses()->attach(Bus::find(23));
+
+        /*** Centro Universitario de Ciencias Económico Administrativas ***/
+        $_center3->buses()->attach(Bus::find(24));
+        $_center3->buses()->attach(Bus::find(25));
+        $_center3->buses()->attach(Bus::find(26));
+        $_center3->buses()->attach(Bus::find(27));
+        $_center3->buses()->attach(Bus::find(28));
+        $_center3->buses()->attach(Bus::find(29));
+        $_center3->buses()->attach(Bus::find(30));
+        $_center3->buses()->attach(Bus::find(31));
+        $_center3->buses()->attach(Bus::find(32));
+        $_center3->buses()->attach(Bus::find(33));
+        $_center3->buses()->attach(Bus::find(34));
+        $_center3->buses()->attach(Bus::find(35));
+        $_center3->buses()->attach(Bus::find(36));
+        $_center3->buses()->attach(Bus::find(37));
+
         /*** Centro Universitario de Ciencias Exactas e Ingenierías ***/
-        $_center4->buses()->attach(Bus::find(1));
-        $_center4->buses()->attach(Bus::find(2));
-        $_center4->buses()->attach(Bus::find(3));
+        $_center4->buses()->attach(Bus::find(39));
+        $_center4->buses()->attach(Bus::find(40));
+        $_center4->buses()->attach(Bus::find(41));
+        $_center4->buses()->attach(Bus::find(42));
+        $_center4->buses()->attach(Bus::find(43));
+        $_center4->buses()->attach(Bus::find(44));
+        $_center4->buses()->attach(Bus::find(45));
+        $_center4->buses()->attach(Bus::find(46));
+        $_center4->buses()->attach(Bus::find(47));
+        $_center4->buses()->attach(Bus::find(48));
+        $_center4->buses()->attach(Bus::find(49));
+        $_center4->buses()->attach(Bus::find(50));
+        $_center4->buses()->attach(Bus::find(51));
+        $_center4->buses()->attach(Bus::find(52));
+        $_center4->buses()->attach(Bus::find(53));
+        $_center4->buses()->attach(Bus::find(54));
+        $_center4->buses()->attach(Bus::find(55));
+        $_center4->buses()->attach(Bus::find(56));
+        $_center4->buses()->attach(Bus::find(57));
+
+        /*** Centro Universitario de Ciencias de la Salud ***/
+        $_center5->buses()->attach(Bus::find(58));
+        $_center5->buses()->attach(Bus::find(59));
+        $_center5->buses()->attach(Bus::find(60));
+        $_center5->buses()->attach(Bus::find(61));
+        $_center5->buses()->attach(Bus::find(62));
+        $_center5->buses()->attach(Bus::find(63));
+        $_center5->buses()->attach(Bus::find(64));
+
+        /*** Centro Universitario de Ciencias Sociales y Humanidades ***/
+        $_center6->buses()->attach(Bus::find(65));
+        $_center6->buses()->attach(Bus::find(66));
+        $_center6->buses()->attach(Bus::find(67));
+        $_center6->buses()->attach(Bus::find(68));
+        $_center6->buses()->attach(Bus::find(69));
+        $_center6->buses()->attach(Bus::find(70));
+        $_center6->buses()->attach(Bus::find(71));
+        $_center6->buses()->attach(Bus::find(72));
+        $_center6->buses()->attach(Bus::find(73));
+        $_center6->buses()->attach(Bus::find(74));
+        $_center6->buses()->attach(Bus::find(75));
+        $_center6->buses()->attach(Bus::find(76));
+        $_center6->buses()->attach(Bus::find(77));
+        $_center6->buses()->attach(Bus::find(78));
+        $_center6->buses()->attach(Bus::find(79));
+        $_center6->buses()->attach(Bus::find(80));
+        $_center6->buses()->attach(Bus::find(81));
+        $_center6->buses()->attach(Bus::find(82));
+        $_center6->buses()->attach(Bus::find(83));
+        $_center6->buses()->attach(Bus::find(84));
+        $_center6->buses()->attach(Bus::find(85));
+        $_center6->buses()->attach(Bus::find(86));
+        $_center6->buses()->attach(Bus::find(87));
+        $_center6->buses()->attach(Bus::find(88));
+        $_center6->buses()->attach(Bus::find(89));
+        $_center6->buses()->attach(Bus::find(90));
+        $_center6->buses()->attach(Bus::find(91));
+
+        /*** Centro Universitario de Tonalá ***/
+        $_center7->buses()->attach(Bus::find(92));
+        $_center7->buses()->attach(Bus::find(93));
+        $_center7->buses()->attach(Bus::find(54));
+        $_center7->buses()->attach(Bus::find(55));
+
+        /*** Centro Universitario de Los Altos ***/
+        $_center8->buses()->attach(Bus::find(94));
+        $_center8->buses()->attach(Bus::find(95));
+        $_center8->buses()->attach(Bus::find(96));
+
+        /*** Centro Universitario de la Costa ***/  //INCORRECTOS
+        $_center9->buses()->attach(Bus::find(21));
+        $_center9->buses()->attach(Bus::find(22));
+
+        /*** Centro Universitario de La Ciénega ***/
+        $_center10->buses()->attach(Bus::find(97));
+        $_center10->buses()->attach(Bus::find(98));
+        $_center10->buses()->attach(Bus::find(99));
+
+        /*** Centro Universitario de Los Lagos ***/ //INCORRECTOS
+        $_center11->buses()->attach(Bus::find(23));
+        $_center11->buses()->attach(Bus::find(24));
+
+        /*** Centro Universitario la Costa Sur ***/
+        $_center12->buses()->attach(Bus::find(100));
+        $_center12->buses()->attach(Bus::find(101));
+        $_center12->buses()->attach(Bus::find(102));
+        $_center12->buses()->attach(Bus::find(103));
+
+        /*** Centro Universitario del Norte ***/    //INCORRECTOS
+        $_center13->buses()->attach(Bus::find(25));
+        $_center13->buses()->attach(Bus::find(26));
+
+        /*** Centro Universitario del Sur ***/  //INCORRECTOS
+        $_center14->buses()->attach(Bus::find(27));
+        $_center14->buses()->attach(Bus::find(28));
+
+        /*** Centro Universitario de los Valles ***/ //INCORRECTOS  
+        $_center15->buses()->attach(Bus::find(29));
+        $_center15->buses()->attach(Bus::find(30));
 
 
     }
