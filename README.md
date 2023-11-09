@@ -246,6 +246,9 @@ RUN chown -R www-data:www-data /var/www/html/storage
 # Ejecuta los comandos adicionales
 RUN php artisan key:generate
 
+# Cambiar los permisos del directorio
+RUN chown -R www-data:www-data /var/www/html/public/images/graphs
+
 # The default apache run command
 CMD ["apache2-foreground"]
 ```
