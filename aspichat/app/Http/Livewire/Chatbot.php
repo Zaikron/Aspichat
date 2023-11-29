@@ -8,6 +8,7 @@ use App\Models\Career;
 use App\Models\Message;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
 
 class Chatbot extends Component
 {
@@ -22,7 +23,8 @@ class Chatbot extends Component
     public $idCareer;
     public $careers;
     public $isLoading = false; //Para el boton de resultados
-    public $fast = true;
+    public $fast = false;
+    public $obtenidos = false;
 
     public $questions = [
         '¿Que te gusta hacer en tus tiempos libres?',
@@ -41,14 +43,13 @@ class Chatbot extends Component
         '¿Cuales aspectos de tu persona te gustaria mejorar?',
     ];
 
-    public function render()
-    {
-        
-        return view('livewire.chatbot');
-    }
 
     public function submitAnswer()
     {
+        if (empty($this->message)) {
+            return;
+        }
+
         $this->chatHistory[] = [
             'question' => $this->questions[$this->i],
             'answer' => $this->message,
@@ -84,83 +85,86 @@ class Chatbot extends Component
 
         if ($c) {
             $this->idCareer = $c->id;
+
+            if($this->fast == true){
+                //Guardado de preguntas respuestas del usuario
+                Result::create([
+                    'p1' => $this->questions[0],
+                    'p2' => $this->questions[1],
+                    'p3' => $this->questions[2],
+                    'p4' => $this->questions[3],
+                    'p5' => $this->questions[4],
+                    'p6' => $this->questions[5],
+                    'p7' => $this->questions[6],
+                    'p8' => $this->questions[7],
+                    'p9' => $this->questions[8],
+                    'p10' => $this->questions[9],
+                    'p11' => $this->questions[10],
+                    'p12' => $this->questions[11],
+                    'p13' => $this->questions[12],
+                    'p14' => $this->questions[13],
+                    'r1' => $this->phrases[0],
+                    'r2' => $this->phrases[1],
+                    'r3' => $this->phrases[2],
+                    'r4' => $this->phrases[3],
+                    'r5' => $this->phrases[4],
+                    'r6' => $this->phrases[5],
+                    'r7' => $this->phrases[6],
+                    'r8' => $this->phrases[7],
+                    'r9' => $this->phrases[8],
+                    'r10' => $this->phrases[9],
+                    'r11' => $this->phrases[10],
+                    'r12' => $this->phrases[11],
+                    'r13' => $this->phrases[12],
+                    'r14' => $this->phrases[13],
+                    'user_id' => auth()->user()->id,
+                    'career_id' => $this->idCareer,
+                ]);
+            }else{
+                //Guardado de preguntas respuestas del usuario
+                Result::create([
+                    'p1' => $this->chatHistory[0]['question'],
+                    'p2' => $this->chatHistory[1]['question'],
+                    'p3' => $this->chatHistory[2]['question'],
+                    'p4' => $this->chatHistory[3]['question'],
+                    'p5' => $this->chatHistory[4]['question'],
+                    'p6' => $this->chatHistory[5]['question'],
+                    'p7' => $this->chatHistory[6]['question'],
+                    'p8' => $this->chatHistory[7]['question'],
+                    'p9' => $this->chatHistory[8]['question'],
+                    'p10' => $this->chatHistory[9]['question'],
+                    'p11' => $this->chatHistory[10]['question'],
+                    'p12' => $this->chatHistory[11]['question'],
+                    'p13' => $this->chatHistory[12]['question'],
+                    'p14' => $this->chatHistory[13]['question'],
+                    'r1' => $this->chatHistory[0]['answer'],
+                    'r2' => $this->chatHistory[1]['answer'],
+                    'r3' => $this->chatHistory[2]['answer'],
+                    'r4' => $this->chatHistory[3]['answer'],
+                    'r5' => $this->chatHistory[4]['answer'],
+                    'r6' => $this->chatHistory[5]['answer'],
+                    'r7' => $this->chatHistory[6]['answer'],
+                    'r8' => $this->chatHistory[7]['answer'],
+                    'r9' => $this->chatHistory[8]['answer'],
+                    'r10' => $this->chatHistory[9]['answer'],
+                    'r11' => $this->chatHistory[10]['answer'],
+                    'r12' => $this->chatHistory[11]['answer'],
+                    'r13' => $this->chatHistory[12]['answer'],
+                    'r14' => $this->chatHistory[13]['answer'],
+                    'user_id' => auth()->user()->id,
+                    'career_id' => $this->idCareer,
+                ]);
+            }
+    
+            $this->storeMessage();
+            $this->recomCareers();
         } else {
-            dd('Carrera no encontrada');
+            //dd('Carrera no encontrada');
+            session()->flash('mensaje', 'Por favor contesta de forma mas especifica para asi proporcionarte un buen resultado');
         }
 
 
-        if($this->fast == true){
-            //Guardado de preguntas respuestas del usuario
-            Result::create([
-                'p1' => $this->questions[0],
-                'p2' => $this->questions[1],
-                'p3' => $this->questions[2],
-                'p4' => $this->questions[3],
-                'p5' => $this->questions[4],
-                'p6' => $this->questions[5],
-                'p7' => $this->questions[6],
-                'p8' => $this->questions[7],
-                'p9' => $this->questions[8],
-                'p10' => $this->questions[9],
-                'p11' => $this->questions[10],
-                'p12' => $this->questions[11],
-                'p13' => $this->questions[12],
-                'p14' => $this->questions[13],
-                'r1' => $this->phrases[0],
-                'r2' => $this->phrases[1],
-                'r3' => $this->phrases[2],
-                'r4' => $this->phrases[3],
-                'r5' => $this->phrases[4],
-                'r6' => $this->phrases[5],
-                'r7' => $this->phrases[6],
-                'r8' => $this->phrases[7],
-                'r9' => $this->phrases[8],
-                'r10' => $this->phrases[9],
-                'r11' => $this->phrases[10],
-                'r12' => $this->phrases[11],
-                'r13' => $this->phrases[12],
-                'r14' => $this->phrases[13],
-                'user_id' => auth()->user()->id,
-                'career_id' => $this->idCareer,
-            ]);
-        }else{
-            //Guardado de preguntas respuestas del usuario
-            Result::create([
-                'p1' => $this->chatHistory[0]['question'],
-                'p2' => $this->chatHistory[1]['question'],
-                'p3' => $this->chatHistory[2]['question'],
-                'p4' => $this->chatHistory[3]['question'],
-                'p5' => $this->chatHistory[4]['question'],
-                'p6' => $this->chatHistory[5]['question'],
-                'p7' => $this->chatHistory[6]['question'],
-                'p8' => $this->chatHistory[7]['question'],
-                'p9' => $this->chatHistory[8]['question'],
-                'p10' => $this->chatHistory[9]['question'],
-                'p11' => $this->chatHistory[10]['question'],
-                'p12' => $this->chatHistory[11]['question'],
-                'p13' => $this->chatHistory[12]['question'],
-                'p14' => $this->chatHistory[13]['question'],
-                'r1' => $this->chatHistory[0]['answer'],
-                'r2' => $this->chatHistory[1]['answer'],
-                'r3' => $this->chatHistory[2]['answer'],
-                'r4' => $this->chatHistory[3]['answer'],
-                'r5' => $this->chatHistory[4]['answer'],
-                'r6' => $this->chatHistory[5]['answer'],
-                'r7' => $this->chatHistory[6]['answer'],
-                'r8' => $this->chatHistory[7]['answer'],
-                'r9' => $this->chatHistory[8]['answer'],
-                'r10' => $this->chatHistory[9]['answer'],
-                'r11' => $this->chatHistory[10]['answer'],
-                'r12' => $this->chatHistory[11]['answer'],
-                'r13' => $this->chatHistory[12]['answer'],
-                'r14' => $this->chatHistory[13]['answer'],
-                'user_id' => auth()->user()->id,
-                'career_id' => $this->idCareer,
-            ]);
-        }
-
-        $this->storeMessage();
-        $this->recomCareers();
+        $this->obtenidos = true;
     }
 
     private function storeMessage(){
@@ -200,45 +204,57 @@ class Chatbot extends Component
             ];
         }
         
+
+        $server = 'localhost';
         
         //CALCULOS DE PROBABILIDADES
-        $response = Http::post('http://localhost:3000/realizar-prediccion', [
+        $response = Http::post('http://' . $server . ':3000/realizar-prediccion', [
             'phrases' => $this->phrases,
         ]);
         $resultado = $response->json();
         $this->career = $resultado;
 
 
-        // URL de la imagen en el servidor remoto
-        $imagen_url = 'http://localhost:3000/obtener-imagen';
-        // Nombre y ruta del archivo de destino en tu servidor, el nombre de la imagen sera el id del usuario
+        // 
+
+        /*$imagen_url = 'http://localhost:3000/obtener-imagen';
         $ruta_destino = public_path('images/graphs/' . auth()->user()->id . '.jpg');
-        // Realiza una solicitud GET para obtener la imagen
         $imagen_data = file_get_contents($imagen_url);
 
-        // Comprueba si la solicitud fue exitosa
         if ($imagen_data !== false) {
-            // Guarda los datos de la imagen en un archivo local
+            //dd($ruta_destino, $imagen_data);
             file_put_contents($ruta_destino, $imagen_data);
-        } else {
-            // Maneja el caso en que la solicitud no fue exitosa
-            echo "No se pudo obtener la imagen";
-        }
-
-
-        /*$response2 = Http::get('http://localhost:3000/obtener-imagen');
-        if ($response2->successful()) {
-            $imageData = $response2->body();
-            file_put_contents(public_path('images/graphs/graph.jpg'), $imageData);
         } else {
             echo "No se pudo obtener la imagen";
         }*/
+
+        $ruta_destino = public_path('images/graphs/' . auth()->user()->id . '.jpg');
+
+        $response2 = Http::get('http://' . $server . ':3000/obtener-imagen');
+        if ($response2->successful()) {
+            $imageData = $response2->body();
+            //dd($ruta_destino, $imageData);
+            if($server == 'python-script-service'){
+                //Storage::disk('public')->put($ruta_destino, $imageData);
+				file_put_contents($ruta_destino, $imageData);
+            }else{
+                file_put_contents($ruta_destino, $imageData);
+            }
+        } else {
+            echo "No se pudo obtener la imagen";
+        }
 
         //dd($this->career);
     }
 
     public function recomCareers(){
         $this->careers = Career::where('pclave', $this->career)->get();
+    }
+
+    public function render()
+    {
+        
+        return view('livewire.chatbot');
     }
 
     

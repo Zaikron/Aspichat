@@ -7,8 +7,8 @@ COPY . /app
 # Establece el directorio de trabajo
 WORKDIR /app
 
-# Instala las dependencias de Python
-RUN pip install tensorflow scikit-learn==1.2.2 flask pandas
+# Instala las dependencias de Python, incluyendo Matplotlib
+RUN pip install tensorflow scikit-learn==1.2.2 flask pandas matplotlib
 
 # Ejecuta tu script Python
 CMD ["python", "app.py"]

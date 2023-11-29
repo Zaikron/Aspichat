@@ -91,7 +91,9 @@
             @endif--}}
             <div class="flex w-full justify-center items-center">
                 @if (!$isLoading)
-                    <button id="resBtn" wire:click="storeChat" class="bg-blue-600 rounded-md text-white font-bold py-2 px-4 my-1">Ver Resultados</button>
+                    @if ($fast)
+                        <button id="resBtn" wire:click="storeChat" class="bg-blue-600 rounded-md text-white font-bold py-2 px-4 my-1">Ver Resultados</button>
+                    @endif
                 @endif
             </div>
 
@@ -170,6 +172,14 @@
 
     </div>
 
+
+    @if(session()->has('mensaje'))
+        <div class="w-full md:w-4/5 lg:w-3/4 bg-red-500 rounded-lg flex justify-center text-white font-bold p-2">
+            {{ session('mensaje') }}
+            <a href="{{ route('chats.index') }}" class="text-blue-300 font-bold">: Recargar pagina</a>
+        </div>
+    @endif
+
     
 
     <!-- Footer -->
@@ -182,12 +192,10 @@
             </div>
 
             <div class="relative mt-2 rounded-md shadow-sm px-4 ">
-                <input wire:keydown.enter="submitAnswer" id="message" wire:model="message" type="text" class="  block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Escribe tu respuesta...">
+                <input wire:keydown.enter="submitAnswer" id="message" wire:model="message" type="text" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Escribe tu respuesta...">
                 
                 <div class="absolute inset-y-0 right-0 flex items-center   ">
                     @if ($message)
-
-
                         <button id="scrollToBottomButton" wire:click="submitAnswer" class="ml-2 px-4 h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-blue-500 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
                             <img class="h-8 w-8" src="{{ asset('images/enviar.png') }}" alt="">
                         </button>
@@ -208,7 +216,9 @@
             </div>
             {{-- VER RESULTADOS--}}
             <div class="px-4"> 
-                <button wire:click="storeChat" class="bg-purple-600 rounded-md text-white font-bold p-2 my-1 w-full">Ver Resultados</button>
+                @if (!$obtenidos)
+                    <button wire:click="storeChat" class="bg-purple-600 rounded-md text-white font-bold p-2 my-1 w-full">Ver Resultados</button>
+                @endif
             </div>
 
             <div class="relative mt-2 rounded-md shadow-sm px-4">

@@ -44,9 +44,6 @@
           </div>
       @auth
               <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <div class="px-4 md:visible lg:visible invisible">
-                  <p class="text-gray-400  rounded-md px-3 py-2 text-lg font-medium">{{auth()->user()->name}}</p>
-                </div>
 
                   {{-- Boton chatbot --}}
                 <div class="ml-2 flex justify-center items-center">
